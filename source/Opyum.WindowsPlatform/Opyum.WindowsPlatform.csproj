@@ -95,7 +95,8 @@
     <Compile Include="Forms\Settings\SettingsEditor\SettingsEditor.ButtonActions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Settings\Settings\ISettingsElement.cs" />
+    <Compile Include="Plugins\PluginManager.cs" />
+    <Compile Include="Settings\ISettingsElement.cs" />
     <Compile Include="Forms\Settings\ISettingsPanel.cs" />
     <Compile Include="Forms\Settings\Panels\Shortcuts\ShortcutPanelElement.cs">
       <SubType>UserControl</SubType>
@@ -107,17 +108,16 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Colors\ColorContainer.cs" />
-    <Compile Include="Settings\Settings\ISettingElement.cs" />
-    <Compile Include="Settings\Settings\Paths.cs" />
-    <Compile Include="Settings\Settings\SettingsContainer.cs" />
-    <Compile Include="Settings\Settings\SettingsManager.cs" />
-    <Compile Include="Settings\Settings\SettingsInterpreter.cs" />
-    <Compile Include="Settings\Shortcuts\ISettingsElement.cs" />
-    <Compile Include="Settings\Shortcuts\ShortcutResolver.cs" />
-    <Compile Include="Settings\Shortcuts\ShortcutManager.cs" />
-    <Compile Include="Settings\Settings\WindowRatio.cs" />
-    <Compile Include="Settings\Shortcuts\IShortcutKeyBinding.cs" />
-    <Compile Include="Settings\Shortcuts\ShortcutKeyBinding.cs" />
+    <Compile Include="Settings\Paths.cs" />
+    <Compile Include="Settings\SettingsContainer.cs" />
+    <Compile Include="Settings\SettingsManager.cs" />
+    <Compile Include="Settings\SettingsInterpreter.cs" />
+    <None Include="Shortcuts\ISettingsElement.cs.del" />
+    <Compile Include="Shortcuts\ShortcutResolver.cs" />
+    <Compile Include="Shortcuts\ShortcutManager.cs" />
+    <Compile Include="Settings\WindowRatio.cs" />
+    <Compile Include="Shortcuts\IShortcutKeyBinding.cs" />
+    <Compile Include="Shortcuts\ShortcutKeyBinding.cs" />
     <Compile Include="Attributes\OpyumShortcutMethodAttribute.cs" />
     <Compile Include="Classes\Xml\XmlJSONConverter.cs" />
     <Compile Include="Classes\Xml\XmlToString.cs" />

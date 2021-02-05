@@ -7,6 +7,7 @@ using Opyum.Structures.Attributes;
 using Opyum.WindowsPlatform.Settings;
 using System.Reflection;
 using Opyum.WindowsPlatform.Attributes;
+using Opyum.WindowsPlatform.Shortcuts;
 using System.IO;
 using static System.Windows.Forms.ListView;
 using System.Collections;
@@ -71,25 +72,6 @@ namespace Opyum.WindowsPlatform.Forms.Settings
 
         public object LoadElements()
         {
-            ////var directory = Path.GetDirectoryName(Uri.UnescapeDataString((new UriBuilder(Assembly.GetExecutingAssembly().CodeBase)).Path));
-            ////var files = Directory.CreateDirectory(directory).GetFiles(searchPattern: "*.dll", searchOption: SearchOption.AllDirectories).Where(a => a.FullName.EndsWith(".dll", StringComparison.OrdinalIgnoreCase))?.Select(u => u.FullName);
-            ////List<OpyumShortcutMethodAttribute> sclist = new List<OpyumShortcutMethodAttribute>();
-
-            ////foreach (var item in files)
-            ////{
-            ////    try
-            ////    {
-            ////        sclist.AddRange(Assembly.LoadFile(item)?.GetTypes()?.SelectMany(t => t.GetMethods()?.Select(m => m.GetCustomAttribute<OpyumShortcutMethodAttribute>()))?.Where(h => h != null));
-            ////    }
-            ////    catch (Exception)
-            ////    {
-            ////        continue;
-            ////    }
-            ////}
-            //var p = Assembly.GetExecutingAssembly().GetTypes()?.SelectMany(g => g.GetMethods().Select(u => u.GetCustomAttribute<OpyumShortcutMethodAttribute>()))?.Where(f => f != null);
-
-            ////Data = new List<ListViewItem>(sclist.Select(l => GenerateItem(l)));
-
             var p = SettingsEditor.Settings?.NewSettings?.Shortcuts;
             Data = p?.Select(g => GenerateItem(g)).ToList();
             listviewshortcuts.Items.AddRange(Data.ToArray());

@@ -16,3 +16,9 @@ D:\repos\Opyum\Debug\bin\Opyum.Plugins.pdb
 D:\repos\Opyum\builds\debug\bin\Opyum.Plugins.dll
 D:\repos\Opyum\builds\debug\bin\Opyum.Plugins.pdb
 D:\repos\Opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.csproj.CoreCompileInputs.cache
+C:\Users\nozia\repos\opyum\builds\debug\bin\Opyum.Plugins.dll
+C:\Users\nozia\repos\opyum\builds\debug\bin\Opyum.Plugins.pdb
+C:\Users\nozia\repos\opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.csprojAssemblyReference.cache
+C:\Users\nozia\repos\opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.csproj.CoreCompileInputs.cache
+C:\Users\nozia\repos\opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.dll
+C:\Users\nozia\repos\opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.pdb

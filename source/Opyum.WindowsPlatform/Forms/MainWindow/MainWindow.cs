@@ -31,7 +31,7 @@ namespace Opyum.WindowsPlatform
 
         private void MainWindow_KeyDown(object sender, KeyEventArgs e)
         {
-            ShortcutResolver.ResolveShortcut(sender, e);
+            ShortcutResolver.ResolveShortcut(sender, e, SettingsManager.GlobalSettings.Shortcuts);
         }
     }
 }
