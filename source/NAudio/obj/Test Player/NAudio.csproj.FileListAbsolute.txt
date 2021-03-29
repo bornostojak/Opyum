@@ -1,0 +1,16 @@
+D:\repos\Opyum\Debug\Test Player\NAudio.dll
+D:\repos\Opyum\Debug\Test Player\NAudio.pdb
+D:\repos\Opyum\source\NAudio\obj\Test Player\NAudio.csprojAssemblyReference.cache
+D:\repos\Opyum\source\NAudio\obj\Test Player\NAudio.Gui.Fader.resources
+D:\repos\Opyum\source\NAudio\obj\Test Player\NAudio.Gui.PanSlider.resources
+D:\repos\Opyum\source\NAudio\obj\Test Player\NAudio.Gui.Pot.resources
+D:\repos\Opyum\source\NAudio\obj\Test Player\NAudio.Gui.VolumeSlider.resources
+D:\repos\Opyum\source\NAudio\obj\Test Player\NAudio.Gui.WaveViewer.resources
+D:\repos\Opyum\source\NAudio\obj\Test Player\NAudio.Utils.ProgressLog.resources
+D:\repos\Opyum\source\NAudio\obj\Test Player\NAudio.csproj.GenerateResource.cache
+D:\repos\Opyum\source\NAudio\obj\Test Player\NAudio.dll
+D:\repos\Opyum\source\NAudio\obj\Test Player\NAudio.pdb
+D:\repos\Opyum\debug_build\bin\Test Player\NAudio.dll
+D:\repos\Opyum\debug_build\bin\Test Player\NAudio.pdb
+D:\repos\Opyum\source\NAudio\obj\Test Player\NAudio.csproj.CoreCompileInputs.cache
+D:\repos\Opyum\debug_build\bin\Test Player\NAudio.dll.config

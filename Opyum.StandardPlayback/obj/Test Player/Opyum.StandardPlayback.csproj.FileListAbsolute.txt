@@ -1,9 +1,0 @@
-D:\repos\Opyum\Debug\Test Player\Opyum.StandardPlayback.dll
-D:\repos\Opyum\Debug\Test Player\Opyum.StandardPlayback.pdb
-D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Test Player\Opyum.StandardPlayback.csprojAssemblyReference.cache
-D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Test Player\Opyum.StandardPlayback.csproj.CopyComplete
-D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Test Player\Opyum.StandardPlayback.dll
-D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Test Player\Opyum.StandardPlayback.pdb
-D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Test Player\Opyum.StandardPlayback.csproj.CoreCompileInputs.cache
-D:\repos\Opyum\builds\test_player\bin\Opyum.StandardPlayback.dll
-D:\repos\Opyum\builds\test_player\bin\Opyum.StandardPlayback.pdb

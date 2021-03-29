@@ -1,0 +1,5 @@
+D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Release\Opyum.StandardPlayback.csprojAssemblyReference.cache
+D:\repos\Opyum\builds\release\bin\Opyum.StandardPlayback.dll
+D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Release\Opyum.StandardPlayback.csproj.CoreCompileInputs.cache
+D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Release\Opyum.StandardPlayback.csproj.CopyComplete
+D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Release\Opyum.StandardPlayback.dll

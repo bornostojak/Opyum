@@ -1,0 +1,27 @@
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\bin\Debug\Opyum.Structures.dll
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\bin\Debug\Opyum.Structures.pdb
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Structures\obj\Debug\Opyum.Structures.csprojAssemblyReference.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Structures\obj\Debug\Opyum.Structures.csproj.CoreCompileInputs.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Structures\obj\Debug\Opyum.Structures.dll
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Structures\obj\Debug\Opyum.Structures.pdb
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\bin\Debug\Opyum.Structures.dll
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\bin\Debug\Opyum.Structures.pdb
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Structures\obj\Debug\Opyum.Structures.csproj.CopyComplete
+D:\repos\Opyum\source\Opyum.Structures\obj\Debug\Opyum.Structures.csprojAssemblyReference.cache
+D:\repos\Opyum\source\Opyum.Structures\obj\Debug\Opyum.Structures.dll
+D:\repos\Opyum\source\Opyum.Structures\obj\Debug\Opyum.Structures.pdb
+D:\repos\Opyum\Debug\Opyum.Structures.dll
+D:\repos\Opyum\Debug\Opyum.Structures.pdb
+D:\repos\Opyum\source\Opyum.Structures\obj\Debug\Opyum.Structures.csproj.CopyComplete
+D:\repos\Opyum\Debug\bin\Opyum.Structures.dll
+D:\repos\Opyum\Debug\bin\Opyum.Structures.pdb
+D:\repos\Opyum\source\Opyum.Structures\obj\Debug\Opyum.Structures.csproj.CoreCompileInputs.cache
+D:\repos\Opyum\builds\debug\bin\Opyum.Structures.dll
+D:\repos\Opyum\builds\debug\bin\Opyum.Structures.pdb
+C:\Users\nozia\repos\opyum\builds\debug\bin\Opyum.Structures.dll
+C:\Users\nozia\repos\opyum\builds\debug\bin\Opyum.Structures.pdb
+C:\Users\nozia\repos\opyum\source\Opyum.Structures\obj\Debug\Opyum.Structures.csprojAssemblyReference.cache
+C:\Users\nozia\repos\opyum\source\Opyum.Structures\obj\Debug\Opyum.Structures.csproj.CoreCompileInputs.cache
+C:\Users\nozia\repos\opyum\source\Opyum.Structures\obj\Debug\Opyum.Structures.csproj.CopyComplete
+C:\Users\nozia\repos\opyum\source\Opyum.Structures\obj\Debug\Opyum.Structures.dll
+C:\Users\nozia\repos\opyum\source\Opyum.Structures\obj\Debug\Opyum.Structures.pdb

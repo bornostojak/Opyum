@@ -1,0 +1,4 @@
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Boo\Debug\Opyum.Plugins.dll
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Plugins\obj\Boo\Opyum.Plugins.csprojAssemblyReference.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Plugins\obj\Boo\Opyum.Plugins.csproj.CoreCompileInputs.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Plugins\obj\Boo\Opyum.Plugins.dll

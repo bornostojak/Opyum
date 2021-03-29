@@ -1,0 +1,4 @@
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Boo\Debug\Opyum.Structures.dll
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Structures\obj\Boo\Opyum.Structures.csprojAssemblyReference.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Structures\obj\Boo\Opyum.Structures.csproj.CoreCompileInputs.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Structures\obj\Boo\Opyum.Structures.dll

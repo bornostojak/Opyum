@@ -1,7 +1,0 @@
-C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Boo\Debug\Opyum.WindowsPlatform.dll
-C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.WindowsPlatform\obj\Boo\Opyum.WindowsPlatform.csprojAssemblyReference.cache
-C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.WindowsPlatform\obj\Boo\Opyum.WindowsPlatform.MainWindow.resources
-C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.WindowsPlatform\obj\Boo\Opyum.WindowsPlatform.csproj.GenerateResource.cache
-C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.WindowsPlatform\obj\Boo\Opyum.WindowsPlatform.csproj.CoreCompileInputs.cache
-C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.WindowsPlatform\obj\Boo\Opyum.WindowsPlatform.csproj.CopyComplete
-C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.WindowsPlatform\obj\Boo\Opyum.WindowsPlatform.dll

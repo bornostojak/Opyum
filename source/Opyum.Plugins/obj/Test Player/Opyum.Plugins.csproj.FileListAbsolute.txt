@@ -1,0 +1,8 @@
+D:\repos\Opyum\Debug\Test Player\Opyum.Plugins.dll
+D:\repos\Opyum\Debug\Test Player\Opyum.Plugins.pdb
+D:\repos\Opyum\source\Opyum.Plugins\obj\Test Player\Opyum.Plugins.csprojAssemblyReference.cache
+D:\repos\Opyum\source\Opyum.Plugins\obj\Test Player\Opyum.Plugins.dll
+D:\repos\Opyum\source\Opyum.Plugins\obj\Test Player\Opyum.Plugins.pdb
+D:\repos\Opyum\builds\test_player\bin\Opyum.Plugins.dll
+D:\repos\Opyum\builds\test_player\bin\Opyum.Plugins.pdb
+D:\repos\Opyum\source\Opyum.Plugins\obj\Test Player\Opyum.Plugins.csproj.CoreCompileInputs.cache
