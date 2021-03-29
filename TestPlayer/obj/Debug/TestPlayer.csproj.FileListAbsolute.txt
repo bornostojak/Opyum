@@ -1,0 +1,21 @@
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\bin\Test\Debug\TestPlayer.exe.config
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\bin\Test\Debug\TestPlayer.exe
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\bin\Test\Debug\TestPlayer.pdb
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\TestPlayer\obj\Debug\TestPlayer.csprojAssemblyReference.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\TestPlayer\obj\Debug\TestPlayer.Form1.resources
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\TestPlayer\obj\Debug\TestPlayer.Properties.Resources.resources
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\TestPlayer\obj\Debug\TestPlayer.csproj.GenerateResource.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\TestPlayer\obj\Debug\TestPlayer.csproj.CoreCompileInputs.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\TestPlayer\obj\Debug\TestPlayer.csproj.CopyComplete
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\TestPlayer\obj\Debug\TestPlayer.exe
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\TestPlayer\obj\Debug\TestPlayer.pdb
+D:\repos\Opyum\source\TestPlayer\obj\Debug\TestPlayer.csprojAssemblyReference.cache
+D:\repos\Opyum\source\TestPlayer\obj\Debug\TestPlayer.Form1.resources
+D:\repos\Opyum\source\TestPlayer\obj\Debug\TestPlayer.Properties.Resources.resources
+D:\repos\Opyum\source\TestPlayer\obj\Debug\TestPlayer.csproj.GenerateResource.cache
+D:\repos\Opyum\source\TestPlayer\obj\Debug\TestPlayer.exe
+D:\repos\Opyum\source\TestPlayer\obj\Debug\TestPlayer.pdb
+D:\repos\Opyum\Debug\bin\TestPlayer.exe.config
+D:\repos\Opyum\Debug\bin\TestPlayer.exe
+D:\repos\Opyum\Debug\bin\TestPlayer.pdb
+D:\repos\Opyum\source\TestPlayer\obj\Debug\TestPlayer.csproj.CopyComplete

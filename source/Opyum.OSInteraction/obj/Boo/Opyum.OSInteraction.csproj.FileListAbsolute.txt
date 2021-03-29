@@ -1,4 +1,0 @@
-C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Boo\Debug\Opyum.OSInteraction.dll
-C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.OSInteraction\obj\Boo\Opyum.OSInteraction.csprojAssemblyReference.cache
-C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.OSInteraction\obj\Boo\Opyum.OSInteraction.csproj.CoreCompileInputs.cache
-C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.OSInteraction\obj\Boo\Opyum.OSInteraction.dll

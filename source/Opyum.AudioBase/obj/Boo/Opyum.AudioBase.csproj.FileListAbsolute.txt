@@ -1,3 +1,0 @@
-C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Boo\Debug\Opyum.AudioBase.dll
-C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.AudioBase\obj\Boo\Opyum.AudioBase.csproj.CoreCompileInputs.cache
-C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.AudioBase\obj\Boo\Opyum.AudioBase.dll

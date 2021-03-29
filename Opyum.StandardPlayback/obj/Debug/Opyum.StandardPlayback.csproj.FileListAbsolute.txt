@@ -1,0 +1,23 @@
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\bin\Test\Debug\Opyum.StandardPlayback.dll
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\bin\Test\Debug\Opyum.StandardPlayback.pdb
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.csprojAssemblyReference.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.csproj.CoreCompileInputs.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.csproj.CopyComplete
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.dll
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.pdb
+D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.csprojAssemblyReference.cache
+D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.dll
+D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.pdb
+D:\repos\Opyum\Debug\bin\Opyum.StandardPlayback.dll
+D:\repos\Opyum\Debug\bin\Opyum.StandardPlayback.pdb
+D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.csproj.CopyComplete
+D:\repos\Opyum\builds\debug\bin\Opyum.StandardPlayback.dll
+D:\repos\Opyum\builds\debug\bin\Opyum.StandardPlayback.pdb
+D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.csproj.CoreCompileInputs.cache
+C:\Users\nozia\repos\opyum\builds\debug\bin\Opyum.StandardPlayback.dll
+C:\Users\nozia\repos\opyum\builds\debug\bin\Opyum.StandardPlayback.pdb
+C:\Users\nozia\repos\opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.csprojAssemblyReference.cache
+C:\Users\nozia\repos\opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.csproj.CoreCompileInputs.cache
+C:\Users\nozia\repos\opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.csproj.CopyComplete
+C:\Users\nozia\repos\opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.dll
+C:\Users\nozia\repos\opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.pdb

@@ -1,0 +1,13 @@
+D:\repos\Opyum\Debug\Test Player\Opyum Launcher.exe
+D:\repos\Opyum\Debug\Test Player\Opyum Launcher.pdb
+D:\repos\Opyum\source\Opyum.Launcher\obj\Test Player\Opyum.Launcher.csprojAssemblyReference.cache
+D:\repos\Opyum\source\Opyum.Launcher\obj\Test Player\Opyum.WindowsApplication.Properties.Resources.resources
+D:\repos\Opyum\source\Opyum.Launcher\obj\Test Player\Opyum.Launcher.csproj.GenerateResource.cache
+D:\repos\Opyum\source\Opyum.Launcher\obj\Test Player\Opyum.Launcher.csproj.CopyComplete
+D:\repos\Opyum\source\Opyum.Launcher\obj\Test Player\Opyum Launcher.exe
+D:\repos\Opyum\source\Opyum.Launcher\obj\Test Player\Opyum Launcher.pdb
+D:\repos\Opyum\source\Opyum.Launcher\obj\Test Player\Opyum.Launcher.csproj.CoreCompileInputs.cache
+D:\repos\Opyum\builds\test_player\bin\Opyum Launcher.exe.config
+D:\repos\Opyum\builds\test_player\bin\Opyum Launcher.exe
+D:\repos\Opyum\builds\test_player\bin\Opyum Launcher.pdb
+D:\repos\Opyum\source\Opyum.Launcher\obj\Test Player\Opyum Launcher.exe.config

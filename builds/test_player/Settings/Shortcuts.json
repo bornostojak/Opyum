@@ -1,7 +1,0 @@
-{"Shortcut":
-[
-      { "Command": "full_screen_mode_switch", "Keys": "Ctrl+F11" },
-      { "Command": "bullshit", "Keys": "Ctrl+Alt+I" },
-      { "Command": "show_menu_strip_for_touch", "Keys": "Ctrl+Alt+L"}
-]
-}

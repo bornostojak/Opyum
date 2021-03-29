@@ -1,8 +1,0 @@
-D:\repos\Opyum\Debug\Test Player\Opyum.OSInteraction.dll
-D:\repos\Opyum\Debug\Test Player\Opyum.OSInteraction.pdb
-D:\repos\Opyum\source\Opyum.OSInteraction\obj\Test Player\Opyum.OSInteraction.csprojAssemblyReference.cache
-D:\repos\Opyum\source\Opyum.OSInteraction\obj\Test Player\Opyum.OSInteraction.dll
-D:\repos\Opyum\source\Opyum.OSInteraction\obj\Test Player\Opyum.OSInteraction.pdb
-D:\repos\Opyum\builds\test_player\bin\Opyum.OSInteraction.dll
-D:\repos\Opyum\builds\test_player\bin\Opyum.OSInteraction.pdb
-D:\repos\Opyum\source\Opyum.OSInteraction\obj\Test Player\Opyum.OSInteraction.csproj.CoreCompileInputs.cache

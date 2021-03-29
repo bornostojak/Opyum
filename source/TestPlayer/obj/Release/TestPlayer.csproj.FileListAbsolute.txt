@@ -1,4 +1,0 @@
-D:\repos\Opyum\source\TestPlayer\obj\Release\TestPlayer.csprojAssemblyReference.cache
-D:\repos\Opyum\source\TestPlayer\obj\Release\TestPlayer.Form1.resources
-D:\repos\Opyum\source\TestPlayer\obj\Release\TestPlayer.Properties.Resources.resources
-D:\repos\Opyum\source\TestPlayer\obj\Release\TestPlayer.csproj.GenerateResource.cache

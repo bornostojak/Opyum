@@ -1,6 +1,0 @@
-[
-	{"Command":"fullscreen","Shortcut":["F11"],"Global":false,"Args":null},
-	{"Command":"hide_menu_strip","Shortcut":["Alt+K","Alt+M"],"Global":false,"Args":null},
-	{"Command":"hide_panels","Shortcut":["Alt+K","Alt+H"],"Global":false,"Args":null},
-	{"Command":"open_settings","Shortcut":["Ctrl+K","Ctrl+P"],"Global":false,"Args":null}
-]

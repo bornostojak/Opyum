@@ -1,0 +1,9 @@
+D:\repos\Opyum\Debug\Test Player\Opyum.Structures.dll
+D:\repos\Opyum\Debug\Test Player\Opyum.Structures.pdb
+D:\repos\Opyum\source\Opyum.Structures\obj\Test Player\Opyum.Structures.csprojAssemblyReference.cache
+D:\repos\Opyum\source\Opyum.Structures\obj\Test Player\Opyum.Structures.csproj.CopyComplete
+D:\repos\Opyum\source\Opyum.Structures\obj\Test Player\Opyum.Structures.dll
+D:\repos\Opyum\source\Opyum.Structures\obj\Test Player\Opyum.Structures.pdb
+D:\repos\Opyum\source\Opyum.Structures\obj\Test Player\Opyum.Structures.csproj.CoreCompileInputs.cache
+D:\repos\Opyum\builds\test_player\bin\Opyum.Structures.dll
+D:\repos\Opyum\builds\test_player\bin\Opyum.Structures.pdb

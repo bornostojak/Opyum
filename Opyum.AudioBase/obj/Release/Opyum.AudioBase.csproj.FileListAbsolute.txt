@@ -1,0 +1,9 @@
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\Opyum.AudioBase\bin\Release\Opyum.AudioBase.dll
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\Opyum.AudioBase\bin\Release\Opyum.AudioBase.pdb
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\Opyum.AudioBase\obj\Release\Opyum.AudioBase.csproj.CoreCompileInputs.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\Opyum.AudioBase\obj\Release\Opyum.AudioBase.dll
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\Opyum.AudioBase\obj\Release\Opyum.AudioBase.pdb
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.AudioBase\obj\Release\Opyum.AudioBase.csprojAssemblyReference.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.AudioBase\obj\Release\Opyum.AudioBase.csproj.CoreCompileInputs.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.AudioBase\obj\Release\Opyum.AudioBase.dll
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\bin\Opyum.AudioBase.dll

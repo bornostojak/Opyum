@@ -1,0 +1,14 @@
+D:\repos\Opyum\source\Opyum.WindowsPlatform.WPF\obj\Release\Opyum.WindowsPlatform.WPF.csprojAssemblyReference.cache
+D:\repos\Opyum\source\Opyum.WindowsPlatform.WPF\obj\Release\Windows\MainWindow.g.cs
+D:\repos\Opyum\source\Opyum.WindowsPlatform.WPF\obj\Release\Opyum.WindowsPlatform.WPF_MarkupCompile.cache
+D:\repos\Opyum\source\Opyum.WindowsPlatform.WPF\obj\Release\Opyum.WindowsPlatform.WPF_MarkupCompile.lref
+D:\repos\Opyum\builds\release\bin\Opyum.WindowsPlatform.WPF.dll
+D:\repos\Opyum\builds\release\bin\Opyum.WindowsPlatform.WPF.pdb
+D:\repos\Opyum\source\Opyum.WindowsPlatform.WPF\obj\Release\Themes\Generic.baml
+D:\repos\Opyum\source\Opyum.WindowsPlatform.WPF\obj\Release\Windows\MainWindow.baml
+D:\repos\Opyum\source\Opyum.WindowsPlatform.WPF\obj\Release\Opyum.WindowsPlatform.WPF.g.resources
+D:\repos\Opyum\source\Opyum.WindowsPlatform.WPF\obj\Release\Opyum.WindowsPlatform.WPF.Properties.Resources.resources
+D:\repos\Opyum\source\Opyum.WindowsPlatform.WPF\obj\Release\Opyum.WindowsPlatform.WPF.csproj.GenerateResource.cache
+D:\repos\Opyum\source\Opyum.WindowsPlatform.WPF\obj\Release\Opyum.WindowsPlatform.WPF.csproj.CoreCompileInputs.cache
+D:\repos\Opyum\source\Opyum.WindowsPlatform.WPF\obj\Release\Opyum.WindowsPlatform.WPF.dll
+D:\repos\Opyum\source\Opyum.WindowsPlatform.WPF\obj\Release\Opyum.WindowsPlatform.WPF.pdb

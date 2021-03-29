@@ -1,0 +1,13 @@
+D:\repos\Opyum\source\NAudio\bin\Release\NAudio.XML
+D:\repos\Opyum\source\NAudio\bin\Release\NAudio.dll
+D:\repos\Opyum\source\NAudio\bin\Release\NAudio.pdb
+D:\repos\Opyum\source\NAudio\obj\Release\NAudio.csprojAssemblyReference.cache
+D:\repos\Opyum\source\NAudio\obj\Release\NAudio.Gui.Fader.resources
+D:\repos\Opyum\source\NAudio\obj\Release\NAudio.Gui.PanSlider.resources
+D:\repos\Opyum\source\NAudio\obj\Release\NAudio.Gui.Pot.resources
+D:\repos\Opyum\source\NAudio\obj\Release\NAudio.Gui.VolumeSlider.resources
+D:\repos\Opyum\source\NAudio\obj\Release\NAudio.Gui.WaveViewer.resources
+D:\repos\Opyum\source\NAudio\obj\Release\NAudio.Utils.ProgressLog.resources
+D:\repos\Opyum\source\NAudio\obj\Release\NAudio.csproj.GenerateResource.cache
+D:\repos\Opyum\source\NAudio\obj\Release\NAudio.dll
+D:\repos\Opyum\source\NAudio\obj\Release\NAudio.pdb

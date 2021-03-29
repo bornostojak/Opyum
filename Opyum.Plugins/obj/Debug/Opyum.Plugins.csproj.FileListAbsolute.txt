@@ -1,0 +1,24 @@
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Plugins\bin\Debug\Opyum.Plugins.dll
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Plugins\bin\Debug\Opyum.Plugins.pdb
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.csprojAssemblyReference.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.csproj.CoreCompileInputs.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.dll
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.pdb
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\bin\Debug\Opyum.Plugins.dll
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\bin\Debug\Opyum.Plugins.pdb
+D:\repos\Opyum\Debug\Opyum.Plugins.dll
+D:\repos\Opyum\Debug\Opyum.Plugins.pdb
+D:\repos\Opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.csprojAssemblyReference.cache
+D:\repos\Opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.dll
+D:\repos\Opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.pdb
+D:\repos\Opyum\Debug\bin\Opyum.Plugins.dll
+D:\repos\Opyum\Debug\bin\Opyum.Plugins.pdb
+D:\repos\Opyum\builds\debug\bin\Opyum.Plugins.dll
+D:\repos\Opyum\builds\debug\bin\Opyum.Plugins.pdb
+D:\repos\Opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.csproj.CoreCompileInputs.cache
+C:\Users\nozia\repos\opyum\builds\debug\bin\Opyum.Plugins.dll
+C:\Users\nozia\repos\opyum\builds\debug\bin\Opyum.Plugins.pdb
+C:\Users\nozia\repos\opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.csprojAssemblyReference.cache
+C:\Users\nozia\repos\opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.csproj.CoreCompileInputs.cache
+C:\Users\nozia\repos\opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.dll
+C:\Users\nozia\repos\opyum\source\Opyum.Plugins\obj\Debug\Opyum.Plugins.pdb

@@ -1,0 +1,99 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opyum.Structures", "Opyum.Structures\Opyum.Structures.csproj", "{89AEE011-3336-4445-B04E-7305623FA8EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opyum.Plugins", "Opyum.Plugins\Opyum.Plugins.csproj", "{47A6A4C1-4434-4A6E-AE6E-71124BB157B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opyum.OSInteraction", "Opyum.OSInteraction\Opyum.OSInteraction.csproj", "{BA831FFF-2B78-41E7-9CD7-A258FCDEF1EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opyum.Launcher", "Opyum.Launcher\Opyum.Launcher.csproj", "{BEE71FE6-B871-4F34-80B0-49FD187A5EBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opyum.WindowsPlatform", "Opyum.WindowsPlatform\Opyum.WindowsPlatform.csproj", "{A5D298FE-228B-4457-9FB8-CC568E017747}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opyum.WindowsPlatform.WPF", "Opyum.WindowsPlatform.WPF\Opyum.WindowsPlatform.WPF.csproj", "{2FE0995D-3218-4586-B163-F9DFF29DA924}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opyum.StandardPlayback", "Opyum.StandardPlayback\Opyum.StandardPlayback.csproj", "{46DF7A4B-83BD-4B42-A988-1981EBE715DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPlayer", "TestPlayer\TestPlayer.csproj", "{CF72882D-5565-4DCC-B896-B8FC4E67378E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NAudio", "NAudio\NAudio.csproj", "{DA4F02E3-0B5E-42CD-B8D9-5583FA51D66E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Test Player|Any CPU = Test Player|Any CPU
+		WPF|Any CPU = WPF|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89AEE011-3336-4445-B04E-7305623FA8EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89AEE011-3336-4445-B04E-7305623FA8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89AEE011-3336-4445-B04E-7305623FA8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89AEE011-3336-4445-B04E-7305623FA8EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89AEE011-3336-4445-B04E-7305623FA8EA}.Test Player|Any CPU.ActiveCfg = Test Player|Any CPU
+		{89AEE011-3336-4445-B04E-7305623FA8EA}.Test Player|Any CPU.Build.0 = Test Player|Any CPU
+		{89AEE011-3336-4445-B04E-7305623FA8EA}.WPF|Any CPU.ActiveCfg = Debug|Any CPU
+		{47A6A4C1-4434-4A6E-AE6E-71124BB157B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47A6A4C1-4434-4A6E-AE6E-71124BB157B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47A6A4C1-4434-4A6E-AE6E-71124BB157B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47A6A4C1-4434-4A6E-AE6E-71124BB157B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47A6A4C1-4434-4A6E-AE6E-71124BB157B5}.Test Player|Any CPU.ActiveCfg = Test Player|Any CPU
+		{47A6A4C1-4434-4A6E-AE6E-71124BB157B5}.Test Player|Any CPU.Build.0 = Test Player|Any CPU
+		{47A6A4C1-4434-4A6E-AE6E-71124BB157B5}.WPF|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA831FFF-2B78-41E7-9CD7-A258FCDEF1EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA831FFF-2B78-41E7-9CD7-A258FCDEF1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA831FFF-2B78-41E7-9CD7-A258FCDEF1EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA831FFF-2B78-41E7-9CD7-A258FCDEF1EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA831FFF-2B78-41E7-9CD7-A258FCDEF1EE}.Test Player|Any CPU.ActiveCfg = Test Player|Any CPU
+		{BA831FFF-2B78-41E7-9CD7-A258FCDEF1EE}.Test Player|Any CPU.Build.0 = Test Player|Any CPU
+		{BA831FFF-2B78-41E7-9CD7-A258FCDEF1EE}.WPF|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE71FE6-B871-4F34-80B0-49FD187A5EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE71FE6-B871-4F34-80B0-49FD187A5EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE71FE6-B871-4F34-80B0-49FD187A5EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE71FE6-B871-4F34-80B0-49FD187A5EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE71FE6-B871-4F34-80B0-49FD187A5EBB}.Test Player|Any CPU.ActiveCfg = Test Player|Any CPU
+		{BEE71FE6-B871-4F34-80B0-49FD187A5EBB}.Test Player|Any CPU.Build.0 = Test Player|Any CPU
+		{BEE71FE6-B871-4F34-80B0-49FD187A5EBB}.WPF|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5D298FE-228B-4457-9FB8-CC568E017747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5D298FE-228B-4457-9FB8-CC568E017747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5D298FE-228B-4457-9FB8-CC568E017747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5D298FE-228B-4457-9FB8-CC568E017747}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5D298FE-228B-4457-9FB8-CC568E017747}.Test Player|Any CPU.ActiveCfg = Test Player|Any CPU
+		{A5D298FE-228B-4457-9FB8-CC568E017747}.Test Player|Any CPU.Build.0 = Test Player|Any CPU
+		{A5D298FE-228B-4457-9FB8-CC568E017747}.WPF|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE0995D-3218-4586-B163-F9DFF29DA924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE0995D-3218-4586-B163-F9DFF29DA924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FE0995D-3218-4586-B163-F9DFF29DA924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FE0995D-3218-4586-B163-F9DFF29DA924}.Test Player|Any CPU.ActiveCfg = Test Player|Any CPU
+		{2FE0995D-3218-4586-B163-F9DFF29DA924}.Test Player|Any CPU.Build.0 = Test Player|Any CPU
+		{2FE0995D-3218-4586-B163-F9DFF29DA924}.WPF|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE0995D-3218-4586-B163-F9DFF29DA924}.WPF|Any CPU.Build.0 = Debug|Any CPU
+		{46DF7A4B-83BD-4B42-A988-1981EBE715DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46DF7A4B-83BD-4B42-A988-1981EBE715DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46DF7A4B-83BD-4B42-A988-1981EBE715DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46DF7A4B-83BD-4B42-A988-1981EBE715DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46DF7A4B-83BD-4B42-A988-1981EBE715DE}.Test Player|Any CPU.ActiveCfg = Test Player|Any CPU
+		{46DF7A4B-83BD-4B42-A988-1981EBE715DE}.Test Player|Any CPU.Build.0 = Test Player|Any CPU
+		{46DF7A4B-83BD-4B42-A988-1981EBE715DE}.WPF|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF72882D-5565-4DCC-B896-B8FC4E67378E}.Debug|Any CPU.ActiveCfg = Test Player|Any CPU
+		{CF72882D-5565-4DCC-B896-B8FC4E67378E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF72882D-5565-4DCC-B896-B8FC4E67378E}.Test Player|Any CPU.ActiveCfg = Test Player|Any CPU
+		{CF72882D-5565-4DCC-B896-B8FC4E67378E}.Test Player|Any CPU.Build.0 = Test Player|Any CPU
+		{CF72882D-5565-4DCC-B896-B8FC4E67378E}.WPF|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA4F02E3-0B5E-42CD-B8D9-5583FA51D66E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA4F02E3-0B5E-42CD-B8D9-5583FA51D66E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA4F02E3-0B5E-42CD-B8D9-5583FA51D66E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA4F02E3-0B5E-42CD-B8D9-5583FA51D66E}.Test Player|Any CPU.ActiveCfg = Test Player|Any CPU
+		{DA4F02E3-0B5E-42CD-B8D9-5583FA51D66E}.Test Player|Any CPU.Build.0 = Test Player|Any CPU
+		{DA4F02E3-0B5E-42CD-B8D9-5583FA51D66E}.WPF|Any CPU.ActiveCfg = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BE467A9-6B71-4550-B417-BB07395E39A8}
+	EndGlobalSection
+EndGlobal

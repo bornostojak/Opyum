@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Opyum.StandardPlayback
+{
+    public partial class StandardPlayer
+    {
+        private string Log()
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

@@ -1,0 +1,38 @@
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\bin\Debug\Opyum Launcher.exe
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\bin\Debug\Opyum Launcher.pdb
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.WindowsApplication\obj\Debug\Opyum.Launcher.csprojAssemblyReference.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.WindowsApplication\obj\Debug\Opyum.WindowsApplication.Properties.Resources.resources
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.WindowsApplication\obj\Debug\Opyum.Launcher.csproj.GenerateResource.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.WindowsApplication\obj\Debug\Opyum.Launcher.csproj.CoreCompileInputs.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.WindowsApplication\obj\Debug\Opyum.Launcher.csproj.CopyComplete
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.WindowsApplication\obj\Debug\Opyum Launcher.exe
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.WindowsApplication\obj\Debug\Opyum Launcher.pdb
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Launcher\obj\Debug\Opyum.Launcher.csprojAssemblyReference.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Launcher\obj\Debug\Opyum.WindowsApplication.Properties.Resources.resources
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Launcher\obj\Debug\Opyum.Launcher.csproj.GenerateResource.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Launcher\obj\Debug\Opyum.Launcher.csproj.CoreCompileInputs.cache
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Launcher\obj\Debug\Opyum Launcher.exe
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Launcher\obj\Debug\Opyum Launcher.pdb
+C:\Users\Borno\Documents\Visual Studio 2017\Projects\Opyum\source\Opyum.Launcher\obj\Debug\Opyum.Launcher.csproj.CopyComplete
+D:\repos\Opyum\source\Opyum.Launcher\obj\Debug\Opyum.Launcher.csprojAssemblyReference.cache
+D:\repos\Opyum\source\Opyum.Launcher\obj\Debug\Opyum.WindowsApplication.Properties.Resources.resources
+D:\repos\Opyum\source\Opyum.Launcher\obj\Debug\Opyum.Launcher.csproj.GenerateResource.cache
+D:\repos\Opyum\source\Opyum.Launcher\obj\Debug\Opyum Launcher.exe
+D:\repos\Opyum\source\Opyum.Launcher\obj\Debug\Opyum Launcher.pdb
+D:\repos\Opyum\Debug\bin\Opyum Launcher.exe
+D:\repos\Opyum\Debug\bin\Opyum Launcher.pdb
+D:\repos\Opyum\source\Opyum.Launcher\obj\Debug\Opyum.Launcher.csproj.CopyComplete
+D:\repos\Opyum\builds\debug\bin\Opyum Launcher.exe
+D:\repos\Opyum\builds\debug\bin\Opyum Launcher.pdb
+D:\repos\Opyum\source\Opyum.Launcher\obj\Debug\Opyum.Launcher.csproj.CoreCompileInputs.cache
+D:\repos\Opyum\builds\debug\bin\Opyum Launcher.exe.config
+C:\Users\nozia\repos\opyum\builds\debug\bin\Opyum Launcher.exe.config
+C:\Users\nozia\repos\opyum\builds\debug\bin\Opyum Launcher.exe
+C:\Users\nozia\repos\opyum\builds\debug\bin\Opyum Launcher.pdb
+C:\Users\nozia\repos\opyum\source\Opyum.Launcher\obj\Debug\Opyum.Launcher.csprojAssemblyReference.cache
+C:\Users\nozia\repos\opyum\source\Opyum.Launcher\obj\Debug\Opyum.WindowsApplication.Properties.Resources.resources
+C:\Users\nozia\repos\opyum\source\Opyum.Launcher\obj\Debug\Opyum.Launcher.csproj.GenerateResource.cache
+C:\Users\nozia\repos\opyum\source\Opyum.Launcher\obj\Debug\Opyum.Launcher.csproj.CoreCompileInputs.cache
+C:\Users\nozia\repos\opyum\source\Opyum.Launcher\obj\Debug\Opyum.Launcher.csproj.CopyComplete
+C:\Users\nozia\repos\opyum\source\Opyum.Launcher\obj\Debug\Opyum Launcher.exe
+C:\Users\nozia\repos\opyum\source\Opyum.Launcher\obj\Debug\Opyum Launcher.pdb

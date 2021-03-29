@@ -1,0 +1,14 @@
+﻿<Window x:Class="Opyum.WindowsPlatform.WPF.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Opyum.WindowsPlatform.WPF.Windows"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Name="ElemntalGrid">
+        <DockPanel Name="InfoPanel" HorizontalAlignment="Stretch" Height="130" LastChildFill="False" VerticalAlignment="Top" Width="auto" Background="Black"/>
+        <DockPanel Name="SongPanel" HorizontalAlignment="Left" Height="auto" LastChildFill="False" Margin="0,130,0,0" VerticalAlignment="Stretch" Width="400" Background="DarkGray"/>
+        <DockPanel Name="MonitorPanel" HorizontalAlignment="Stretch" Height="auto" LastChildFill="False" Margin="400,130,0,0" VerticalAlignment="Stretch" Width="auto" Background="LightBlue"/>
+    </Grid>
+</Window>
