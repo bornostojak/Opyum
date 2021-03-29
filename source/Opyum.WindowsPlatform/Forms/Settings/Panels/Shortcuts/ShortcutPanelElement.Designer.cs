@@ -36,6 +36,8 @@ namespace Opyum.WindowsPlatform.Forms.Settings
             this.listviewshortcuts = new System.Windows.Forms.ListView();
             this.Action = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Shortcut = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Global = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Disabled = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Description = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NameLabel = new System.Windows.Forms.Label();
             this.ShortcutTextLabel = new System.Windows.Forms.Label();
@@ -45,12 +47,12 @@ namespace Opyum.WindowsPlatform.Forms.Settings
             this.buttonSaveShortcut = new System.Windows.Forms.Button();
             this.isGlobalCheckBox = new System.Windows.Forms.CheckBox();
             this.isDisabledCheckBox = new System.Windows.Forms.CheckBox();
-            this.Global = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Disabled = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBoxShortcut = new Opyum.WindowsPlatform.Settings.Panels.CustomPanelControls.TextBoxForShortcutCapture();
+            this.AssignedLabel = new System.Windows.Forms.Label();
+            this.textBoxAssigned = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // listViewshortcuts
+            // listviewshortcuts
             // 
             this.listviewshortcuts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -66,7 +68,7 @@ namespace Opyum.WindowsPlatform.Forms.Settings
             this.listviewshortcuts.HideSelection = false;
             this.listviewshortcuts.Location = new System.Drawing.Point(3, 32);
             this.listviewshortcuts.MultiSelect = false;
-            this.listviewshortcuts.Name = "listViewshortcuts";
+            this.listviewshortcuts.Name = "listviewshortcuts";
             this.listviewshortcuts.Size = new System.Drawing.Size(494, 302);
             this.listviewshortcuts.TabIndex = 3;
             this.listviewshortcuts.UseCompatibleStateImageBehavior = false;
@@ -81,6 +83,14 @@ namespace Opyum.WindowsPlatform.Forms.Settings
             // 
             this.Shortcut.Text = "Shortcut";
             this.Shortcut.Width = 119;
+            // 
+            // Global
+            // 
+            this.Global.Text = "Global";
+            // 
+            // Disabled
+            // 
+            this.Disabled.Text = "Disabled";
             // 
             // Description
             // 
@@ -101,7 +111,7 @@ namespace Opyum.WindowsPlatform.Forms.Settings
             // 
             this.ShortcutTextLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ShortcutTextLabel.AutoSize = true;
-            this.ShortcutTextLabel.Location = new System.Drawing.Point(5, 343);
+            this.ShortcutTextLabel.Location = new System.Drawing.Point(10, 343);
             this.ShortcutTextLabel.Margin = new System.Windows.Forms.Padding(5);
             this.ShortcutTextLabel.Name = "ShortcutTextLabel";
             this.ShortcutTextLabel.Size = new System.Drawing.Size(50, 13);
@@ -153,33 +163,25 @@ namespace Opyum.WindowsPlatform.Forms.Settings
             // 
             this.isGlobalCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.isGlobalCheckBox.AutoSize = true;
+            this.isGlobalCheckBox.Enabled = false;
             this.isGlobalCheckBox.Location = new System.Drawing.Point(63, 366);
             this.isGlobalCheckBox.Name = "isGlobalCheckBox";
             this.isGlobalCheckBox.Size = new System.Drawing.Size(99, 17);
             this.isGlobalCheckBox.TabIndex = 6;
             this.isGlobalCheckBox.Text = "Global Shortcut";
             this.isGlobalCheckBox.UseVisualStyleBackColor = true;
-            this.isGlobalCheckBox.Enabled = false;
             // 
             // isDisabledCheckBox
             // 
             this.isDisabledCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.isDisabledCheckBox.AutoSize = true;
+            this.isDisabledCheckBox.Enabled = false;
             this.isDisabledCheckBox.Location = new System.Drawing.Point(168, 366);
             this.isDisabledCheckBox.Name = "isDisabledCheckBox";
             this.isDisabledCheckBox.Size = new System.Drawing.Size(67, 17);
             this.isDisabledCheckBox.TabIndex = 7;
             this.isDisabledCheckBox.Text = "Disabled";
             this.isDisabledCheckBox.UseVisualStyleBackColor = true;
-            this.isDisabledCheckBox.Enabled = false;
-            // 
-            // Global
-            // 
-            this.Global.Text = "Global";
-            // 
-            // Disabled
-            // 
-            this.Disabled.Text = "Disabled";
             // 
             // textBoxShortcut
             // 
@@ -192,10 +194,31 @@ namespace Opyum.WindowsPlatform.Forms.Settings
             this.textBoxShortcut.TabIndex = 4;
             this.textBoxShortcut.KeyDown += new System.Windows.Forms.KeyEventHandler(this.getShortcut);
             // 
+            // AssignedLabel
+            // 
+            this.AssignedLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.AssignedLabel.AutoSize = true;
+            this.AssignedLabel.Location = new System.Drawing.Point(7, 391);
+            this.AssignedLabel.Name = "AssignedLabel";
+            this.AssignedLabel.Size = new System.Drawing.Size(53, 13);
+            this.AssignedLabel.TabIndex = 8;
+            this.AssignedLabel.Text = "Assigned:";
+            // 
+            // textBoxAssigned
+            // 
+            this.textBoxAssigned.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxAssigned.Enabled = false;
+            this.textBoxAssigned.Location = new System.Drawing.Point(63, 388);
+            this.textBoxAssigned.Name = "textBoxAssigned";
+            this.textBoxAssigned.Size = new System.Drawing.Size(168, 20);
+            this.textBoxAssigned.TabIndex = 9;
+            // 
             // ShortcutPanelElement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBoxAssigned);
+            this.Controls.Add(this.AssignedLabel);
             this.Controls.Add(this.isDisabledCheckBox);
             this.Controls.Add(this.isGlobalCheckBox);
             this.Controls.Add(this.buttonSaveShortcut);
@@ -207,7 +230,7 @@ namespace Opyum.WindowsPlatform.Forms.Settings
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.listviewshortcuts);
             this.Name = "ShortcutPanelElement";
-            this.Size = new System.Drawing.Size(500, 400);
+            this.Size = new System.Drawing.Size(500, 434);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,5 +253,7 @@ namespace Opyum.WindowsPlatform.Forms.Settings
         private System.Windows.Forms.CheckBox isDisabledCheckBox;
         private System.Windows.Forms.ColumnHeader Global;
         private System.Windows.Forms.ColumnHeader Disabled;
+        private System.Windows.Forms.Label AssignedLabel;
+        private System.Windows.Forms.TextBox textBoxAssigned;
     }
 }

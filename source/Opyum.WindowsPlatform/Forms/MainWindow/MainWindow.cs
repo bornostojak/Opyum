@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Opyum.WindowsPlatform.Settings;
+using Opyum.WindowsPlatform.Shortcuts;
 
 namespace Opyum.WindowsPlatform
 {
@@ -29,9 +31,15 @@ namespace Opyum.WindowsPlatform
 
         }
 
-        private void MainWindow_KeyDown(object sender, KeyEventArgs e)
+        private async void MainWindow_KeyDown(object sender, KeyEventArgs e)
         {
-            ShortcutResolver.ResolveShortcut(sender, e);
+            IShortcutKeyBinding shortcut = null;
+            //ShortcutResolver.ResolveShortcut(sender, e, SettingsManager.GlobalSettings.Shortcuts);
+            await Task.Run(() =>
+            {
+                shortcut = ShortcutResolver.ResolveShortcut(sender, e);
+            });
+            shortcut?.Run(sender);
         }
     }
 }

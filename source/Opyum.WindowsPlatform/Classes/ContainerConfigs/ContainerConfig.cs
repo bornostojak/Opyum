@@ -1,4 +1,5 @@
-﻿using Autofac;
+﻿/*
+using Autofac;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace Opyum.WindowsPlatform
             return builder.Build();
         }
     }
-}
+}*/
 
 /*  EXAMPLES
 

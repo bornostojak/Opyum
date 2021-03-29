@@ -132,8 +132,6 @@
     <Compile Include="Attributes\OpyumAudioSampleConverterAttribute.cs" />
     <Compile Include="Attributes\OpyumSettingsGroupAttribute.cs" />
     <Compile Include="Attributes\OpyumPlaylistItemAttribute.cs" />
-    <None Include="zzz_OUTDATED - PRE-DELETION\AudioFileMemoryStream.cs.old" />
-    <None Include="zzz_OUTDATED - PRE-DELETION\FileFromMemoryStream.cs.bad" />
     <Compile Include="Attributes\OpyumContentAttribute.cs" />
     <Compile Include="Playlist\AudioPicture\AudioPicture.cs" />
     <None Include="Playlist\KEEP-BUT-DELETE-LATER\BaseAudioItem.cs.old" />
