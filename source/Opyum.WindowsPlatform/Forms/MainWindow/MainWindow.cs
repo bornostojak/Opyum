@@ -40,6 +40,7 @@ namespace Opyum.WindowsPlatform
                 shortcut = ShortcutResolver.ResolveShortcut(sender, e);
             });
             shortcut?.Run(sender);
+            //SettingsManager.GlobalSettings?.FindShortcut(ShortcutResolver.GrabShortcut(e)?.ToArray())?.Run(sender);
         }
     }
 }

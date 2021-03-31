@@ -15,12 +15,25 @@ namespace Opyum.WindowsPlatform.Settings
     {
         public SettingsContainer NewSettings { get; set; }
 
+        public static bool BlockEscapeClose { get; set; } = false;
+
         protected void Setup()
         {
             NewSettings = SettingsManager.GlobalSettings?.Clone();
             GenerateTree(NewSettings, SettingsTreeView.Nodes); ;
             SettingsTreeView.AfterSelect += UpdatePanel;
             SettingsTreeView.ExpandAll();
+            KeyPreview = true;
+            KeyDown += KeyDownDetected;
+        }
+
+        private void KeyDownDetected(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Escape)
+            {
+                if ((ChangeLog.Count == 0 || _recordedChanges.SequenceEqual(ChangeLog)) && !BlockEscapeClose)
+                    Close();
+            }
         }
 
         private void UpdatePanel(object sender, TreeViewEventArgs e)
@@ -39,10 +52,11 @@ namespace Opyum.WindowsPlatform.Settings
                     if (control is IUndoRedoable)
                     {
                         this.KeyDown += ((ISettingsPanel)control).KeyPressResolve;
+                        ((ISettingsPanel)control).SettingsChanged += CheckForChanges;
                     }
                 }
             }
-            catch (Exception ef)
+            catch (Exception)
             {
 
             }

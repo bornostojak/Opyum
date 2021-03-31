@@ -50,6 +50,7 @@ namespace Opyum.WindowsPlatform.Forms.Settings
             this.textBoxShortcut = new Opyum.WindowsPlatform.Settings.Panels.CustomPanelControls.TextBoxForShortcutCapture();
             this.AssignedLabel = new System.Windows.Forms.Label();
             this.textBoxAssigned = new System.Windows.Forms.TextBox();
+            this.buttonClearShortcut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listviewshortcuts
@@ -213,6 +214,17 @@ namespace Opyum.WindowsPlatform.Forms.Settings
             this.textBoxAssigned.Size = new System.Drawing.Size(168, 20);
             this.textBoxAssigned.TabIndex = 9;
             // 
+            // buttonClearShortcut
+            // 
+            this.buttonClearShortcut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonClearShortcut.Location = new System.Drawing.Point(318, 338);
+            this.buttonClearShortcut.Name = "buttonClearShortcut";
+            this.buttonClearShortcut.Size = new System.Drawing.Size(75, 23);
+            this.buttonClearShortcut.TabIndex = 5;
+            this.buttonClearShortcut.Text = "Clear";
+            this.buttonClearShortcut.UseVisualStyleBackColor = true;
+            this.buttonClearShortcut.Click += new System.EventHandler(this.buttonClearShortcut_Click);
+            // 
             // ShortcutPanelElement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +233,7 @@ namespace Opyum.WindowsPlatform.Forms.Settings
             this.Controls.Add(this.AssignedLabel);
             this.Controls.Add(this.isDisabledCheckBox);
             this.Controls.Add(this.isGlobalCheckBox);
+            this.Controls.Add(this.buttonClearShortcut);
             this.Controls.Add(this.buttonSaveShortcut);
             this.Controls.Add(this.buttonClearSearch);
             this.Controls.Add(this.textBoxSearch);
@@ -255,5 +268,6 @@ namespace Opyum.WindowsPlatform.Forms.Settings
         private System.Windows.Forms.ColumnHeader Disabled;
         private System.Windows.Forms.Label AssignedLabel;
         private System.Windows.Forms.TextBox textBoxAssigned;
+        private System.Windows.Forms.Button buttonClearShortcut;
     }
 }

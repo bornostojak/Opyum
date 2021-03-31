@@ -2,6 +2,7 @@
 using Opyum.WindowsPlatform.Settings;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -12,6 +13,9 @@ namespace Opyum.WindowsPlatform.Shortcuts
 {
     public class ShortcutKeyBinding : IShortcutKeyBinding, IDisposable, ISettingsElement<IShortcutKeyBinding>
     {
+        [JsonIgnore]
+        static KeysConverter kc = new System.Windows.Forms.KeysConverter();
+
         /// <summary>
         /// The string linking the Method and the <see cref="ShortcutKeyBinding"/>
         /// </summary>
@@ -21,15 +25,15 @@ namespace Opyum.WindowsPlatform.Shortcuts
         /// The <see cref="System.Collections.Generic.List{T}"/> of <see cref="Keys"/> the make up the shortcut.
         /// </summary>
         [JsonIgnore]
-        public List<Keys> ShortcutKeys { get => _shortcutKeys; set { _shortcutKeys = value; updateShortcutString(); } }
+        public List<Keys> ShortcutKeys { get => _shortcutKeys; set { _shortcutKeys = value; ShortcutChanged?.Invoke(this, new EventArgs()); /* updateShortcutString(); */} }
         List<Keys> _shortcutKeys = new List<Keys>();
 
 
         /// <summary>
         /// The shortcut in string form.
         /// </summary>
-        public List<string> Shortcut { get => _shortcut; set { _shortcut = value; checkForShortcutUpdates(); } }
-        private List<string> _shortcut = null;
+        public string[] Shortcut { get => ShortcutKeys.Select(x => kc.ConvertToString(null, CultureInfo.CurrentCulture, x)).ToArray(); set { getShortcutFromShortctString(value); } }
+        //private List<string> _shortcut = null;
 
         /// <summary>
         /// Is set when the particular keybing is disabled
@@ -59,7 +63,7 @@ namespace Opyum.WindowsPlatform.Shortcuts
         /// The <see cref="object"/> containing the function delegate
         /// </summary>
         [JsonIgnore]
-        public object Function { get; protected set; }
+        public object Function { get; set; }
 
         /// <summary>
         /// The arguments of the shortcut
@@ -70,26 +74,28 @@ namespace Opyum.WindowsPlatform.Shortcuts
 
 
         public delegate void DELEGATE(string[] args = null);
-        public event EventHandler FunctionRequest;
+        //public event EventHandler FunctionRequest;
+
+        public event EventHandler ShortcutChanged;
 
 
 
-        private void checkForShortcutUpdates()
-        {
-            _shortcut?.ForEach(x =>
-            {
-                x = x.Replace(" ", string.Empty);
-            });
-            getShortcutFromShortctString();
-        }
+        //private void checkForShortcutUpdates()
+        //{
+        //    _shortcut?.ForEach(x =>
+        //    {
+        //        x = x.Replace(" ", string.Empty);
+        //    });
+        //    getShortcutFromShortctString();
+        //}
 
 
 
 
         public ShortcutKeyBinding()
         {
-            _shortcutKeys.Add(Keys.None);
-            FunctionRequest += ShortcutManager.SetUpShortcutsOnRequest;
+            //_shortcutKeys.Add(Keys.None);
+            //FunctionRequest += ShortcutManager.SetUpShortcutsOnRequest;
         }
 
         ~ShortcutKeyBinding()
@@ -97,36 +103,36 @@ namespace Opyum.WindowsPlatform.Shortcuts
             this.Dispose();
         }
 
-        protected void updateShortcutString()
-        {
-            var kc = new KeysConverter();
-            _shortcut.Clear();
-            ShortcutKeys.ForEach(x => _shortcut.Add(kc.ConvertToString(x)));
-        }
+        //protected void updateShortcutString()
+        //{
+        //    var kc = new KeysConverter();
+        //    _shortcut.Clear();
+        //    ShortcutKeys.ForEach(x => _shortcut.Add(kc.ConvertToString(x)));
+        //}
 
         /// <summary>
         /// Updates the shortcut string
         /// </summary>
-        /// <param name="str"></param>
-        public void UpdateShortcutString(List<string> str)
+        /// <param name="shortcut"></param>
+        public void UpdateShortcut(IEnumerable<Keys> shortcut)
         {
-            Shortcut = str;
+            ShortcutKeys = new List<Keys>(shortcut);
         }
 
-        protected void getShortcutFromShortctString()
+        protected void getShortcutFromShortctString(IEnumerable<string> str)
         {
             //if the shortcut filed in the Shortcuts.json file is left empty or says "disable", leave the ShortcutKeys to be Keys.None, and if needed set the IsDisabled flag
-            if ((_shortcut.Count == 1 && (IsDisabled = _shortcut.Contains("disable"))) || _shortcut == null || _shortcut.Count == 0)
+            if (str == null || (str.Count() == 1 && (IsDisabled = str.Contains("disable"))) || str.Count() == 0)
             {
                 return;
             }
 
             //clear any tresent shortcuts
             _shortcutKeys?.Clear();
+            List<Keys> keys = new List<Keys>();
 
-            KeysConverter kc = new System.Windows.Forms.KeysConverter();
             //for each shortcut in the list of text shortcuts update the ShortcutKeys
-            foreach (string scut in _shortcut)
+            foreach (string scut in str)
             {
                 //make sure that two '+' don't get confused with the key '+'
                 string text = scut == "+" ? "\\plus" : scut.Replace("++", "+\\plus").Replace("Num+", "NumPlus");
@@ -145,19 +151,21 @@ namespace Opyum.WindowsPlatform.Shortcuts
                         //log the error later
                     }
                 }
-                ShortcutKeys.Add(temp);
+                keys.Add(temp);
             }
-            FunctionRequest?.Invoke(this, new EventArgs());
+
+            ShortcutKeys = keys;
+            //FunctionRequest?.Invoke(this, new EventArgs());
         }
 
-        /// <summary>
-        /// Set the function the shortcut will call when needed.
-        /// </summary>
-        /// <param name="func"></param>
-        public void AddFunction(object func)
-        {
-            Function = func;
-        }
+        ///// <summary>
+        ///// Set the function the shortcut will call when needed.
+        ///// </summary>
+        ///// <param name="func"></param>
+        //public void AddFunction(object func)
+        //{
+        //    Function = func;
+        //}
 
         
         /// <summary>
@@ -187,7 +195,7 @@ namespace Opyum.WindowsPlatform.Shortcuts
         /// <returns></returns>
         public bool MatchShortcuts(List<Keys> keys)
         {
-            if (keys.Count != Shortcut.Count)
+            if (keys.Count != ShortcutKeys.Count)
             {
                 return false;
             }
@@ -202,12 +210,11 @@ namespace Opyum.WindowsPlatform.Shortcuts
         {
             return new ShortcutKeyBinding()
             {
-                Command = this.Command.ToString(),
-                _shortcut = new List<string>(this._shortcut),
+                Command = this.Command?.ToString(),
                 _shortcutKeys = new List<Keys>(this._shortcutKeys),
                 IsDisabled = this.IsDisabled,
                 Global = this.Global,
-                Action = this.Action.ToString(),
+                Action = this.Action?.ToString(),
                 Description = this.Description
             };
         }
@@ -219,7 +226,7 @@ namespace Opyum.WindowsPlatform.Shortcuts
         /// <param name="keybinding"></param>
         public IShortcutKeyBinding UpdateDataFromKeybinding(IShortcutKeyBinding keybinding)
         {
-            Shortcut = keybinding.Shortcut == null ? new List<string>() : new List<string>(keybinding.Shortcut);
+            ShortcutKeys = new List<Keys>(keybinding.ShortcutKeys);
             Global = keybinding.Global;
             IsDisabled = keybinding.IsDisabled;
             Args = keybinding.Args == null ? null : new List<string>(keybinding.Args);
@@ -236,11 +243,9 @@ namespace Opyum.WindowsPlatform.Shortcuts
             {
                 this._shortcutKeys?.Clear();
                 this._shortcutKeys = null;
-                this._shortcut?.Clear();
-                this._shortcut = null;
                 this.Command = null;
                 this.Function = null;
-                this.FunctionRequest = null;
+                //this.FunctionRequest = null;
                 return;
             }
         }
@@ -265,14 +270,28 @@ namespace Opyum.WindowsPlatform.Shortcuts
 
         #endregion
 
-        public static ShortcutKeyBinding GenerateKeyBinding(string command, List<string> shortcut, string action, string description)
+        public static ShortcutKeyBinding GenerateKeyBinding(string command, string[] shortcut, string action, string description, Delegate kbdelegate = null)
         {
-            return new ShortcutKeyBinding() { Command = command, Shortcut = shortcut, Action = action, Description = description };
+            return new ShortcutKeyBinding() { Command = command, Shortcut = shortcut, Action = action, Description = description , Function = kbdelegate};
         }
 
-        public static ShortcutKeyBinding GenerateKeyBinding(string command, List<Keys> shortcuts, string action, string description)
+        public static ShortcutKeyBinding GenerateKeyBinding(string command, IEnumerable<Keys> shortcuts, string action, string description, Delegate kbdelegate = null)
         {
-            return GenerateKeyBinding(command, ShortcutResolver.GetShortcutStringList(shortcuts), action, description);
+            return new ShortcutKeyBinding() { Command = command, ShortcutKeys = shortcuts.ToList(), Action = action, Description = description , Function = kbdelegate};
+        }
+
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is ShortcutKeyBinding))
+                return false;
+            var o = (ShortcutKeyBinding)obj;
+            return Command == o.Command && ShortcutKeys.SequenceEqual(o.ShortcutKeys);
+        }
+
+        public override int GetHashCode()
+        {
+            return Command.GetHashCode() + ShortcutKeys.Sum(x => (int)x);
         }
 
         static string checkSpecialKeys(string str)

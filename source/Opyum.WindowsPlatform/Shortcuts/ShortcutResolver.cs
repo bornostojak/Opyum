@@ -14,13 +14,10 @@ namespace Opyum.WindowsPlatform.Settings
 {
     public static class ShortcutResolver
     {
-        static object callerObject { get; set; }
         static private KeysConverter kc = new KeysConverter();
-        static string _scString = string.Empty;
         static bool _keysPressedTimerSet = false;
         static readonly int timerDuration = 750;
         static System.Timers.Timer _keysPressedTimer = new System.Timers.Timer(timerDuration);
-        static List<ShortcutKeyBinding> _shortcutCompareList = null;
 
         static List<Keys> KeysPressed { get; set; } = new List<Keys>();
 
@@ -31,14 +28,20 @@ namespace Opyum.WindowsPlatform.Settings
         /// <param name="e">The args of the event.</param>
         public static IShortcutKeyBinding ResolveShortcut(object sender, KeyEventArgs e)
         {
-            ShortcutKeyBinding result = null;
+            IShortcutKeyBinding result = null;
             var shrct = ShortcutResolver.GrabShortcut(e);
             if (shrct != null)
-                result = SettingsManager.GlobalSettings.Shortcuts.FirstOrDefault(x => x.ShortcutKeys.SequenceEqual(shrct));
+            {
+                //int len = shrct.Count();
+                //var results = SettingsManager.GlobalSettings.Shortcuts.Where(x => x.ShortcutKeys.SequenceEqual(shrct));
+                result = SettingsManager.GlobalSettings?.FindShortcut(shrct.ToArray());
+            }
+                
             if (result != null)
                 KeysPressed.Clear();
             return result;
         }
+        
 
         /// <summary>
         /// Runs the method assigned to the shortcut
@@ -62,11 +65,11 @@ namespace Opyum.WindowsPlatform.Settings
         /// </summary>
         /// <param name="keys"></param>
         /// <returns></returns>
-        public static string GetShortcutString(List<Keys> keys)
+        public static string GetShortcutString(IEnumerable<Keys> keys)
         {
             if (keys != null)
             {
-                return String.Join(", ", GetShortcutStringList(keys));
+                return String.Join(", ", keys.Select(x => GetShortcutString(x)));
             }
             return string.Empty;
         }
@@ -85,24 +88,6 @@ namespace Opyum.WindowsPlatform.Settings
             catch (Exception)
             {
                 return string.Empty;
-            }
-        }
-
-        /// <summary>
-        /// Get the string of the shortcut pressed
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="keys"></param>
-        /// <returns></returns>
-        public static List<string> GetShortcutStringList(List<Keys> keys)
-        {
-            try
-            {
-                return keys.Select(x => kc.ConvertToString(null, CultureInfo.CurrentCulture, x)).ToList();
-            }
-            catch (Exception)
-            {
-                return new List<string>();
             }
         }
 
@@ -127,28 +112,11 @@ namespace Opyum.WindowsPlatform.Settings
 
         static void keysPressedTimerEventCall(object s, EventArgs e)
         {
-            //if (KeysPressed.Count > 0 && _shortcutCompareList?.Count > 0)
-            //{
-            //    try
-            //    {
-            //        if (callerObject is Control && ((Control)callerObject).InvokeRequired && KeysPressed != null & KeysPressed.Count > 0)
-            //        {
-            //            ((Control)callerObject).Invoke(new MethodInvoker(() => _shortcutCompareList?.Where(a => a.ShortcutKeys.SequenceEqual(KeysPressed))?.FirstOrDefault()?.Run(callerObject)));
-            //            KeysPressed.Clear();
-            //        }
-            //    }
-            //    catch (InvalidOperationException)
-            //    {
-                    
-            //    };
-            //}
             _keysPressedTimer.Stop();
             _keysPressedTimer.Dispose();
             _keysPressedTimer = new System.Timers.Timer(timerDuration);
             KeysPressed.Clear();
-            _shortcutCompareList = null;
             _keysPressedTimerSet = false;
-            _scString = string.Empty;
         }
 
     }

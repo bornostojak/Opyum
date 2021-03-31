@@ -12,7 +12,9 @@ namespace Opyum.WindowsPlatform.Settings
 {
     public static class SettingsManager 
     {
-        public static SettingsContainer GlobalSettings { get; set; }
+        public static bool SavingSettings { get; set; }
+        public static SettingsContainer GlobalSettings { get => _settings; set => _settings.Update(value); }
+        static SettingsContainer _settings = new SettingsContainer();
 
 
 
@@ -25,19 +27,20 @@ namespace Opyum.WindowsPlatform.Settings
 
         public static void LoadSettings()
         {
-            GlobalSettings = SettingsInterpreter.LoadSettings();
+            GlobalSettings.Shortcuts = ShortcutManager.GetShortcutsFromAssembliesInExecutingAssemblies().ToArray();
+            //GlobalSettings = SettingsInterpreter.LoadSettings();
+            GlobalSettings.Shortcuts = SettingsInterpreter.GetShortcuts().ToArray();
 
             //get all shortcuts from the entire program, remove their default shortcuts and add to shortcut list
-            GlobalSettings?.Shortcuts.AddRange(ShortcutManager.GetShortcutsFromAssembliesInexecutingFolder());
         }
 
 
         public static void SaveSettings()
         {
             //SettingsManager.GlobalSettings?.Shortcuts = SettingsManager.GlobalSettings?.Shortcuts?.OrderBy(u => u.Command).ToList();
-            SettingsManager.GlobalSettings?.Shortcuts?.Sort((x, y) => x.Action.CompareTo(y.Action));
+            //SettingsManager.GlobalSettings?.Shortcuts?.Sort((x, y) => x.Action.CompareTo(y.Action));
 
-
+            SavingSettings = true;
             foreach (var item in SettingsManager.GlobalSettings.GetType().GetProperties())
             {
                 if (item.Name == "Item")
@@ -64,6 +67,7 @@ namespace Opyum.WindowsPlatform.Settings
                     throw q;
                 }
             }
+            SavingSettings = false;
         }
 
         public static void UpdateSettingsFromFile(string path)
@@ -75,7 +79,7 @@ namespace Opyum.WindowsPlatform.Settings
             }
 
             //update the settings by reading the Json from the file
-            UpdateSettings(JsonConvert.DeserializeObject<SettingsContainer>($"{{{SettingsInterpreter.GetJsonFormFile(path)}}}"));
+            GlobalSettings.Update(JsonConvert.DeserializeObject<SettingsContainer>($"{{{SettingsInterpreter.GetJsonFormFile(path)}}}"));
         }
 
         public static void UpdateSettings(SettingsContainer settings)
@@ -98,6 +102,7 @@ namespace Opyum.WindowsPlatform.Settings
                 }
             }
             //clear the garbage
+
             settings.Dispose();
         }
     }

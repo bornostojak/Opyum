@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using Opyum.WindowsPlatform.Settings;
 using System.Threading;
 using System.Collections;
+using Opyum.WindowsPlatform.Shortcuts;
 
 namespace Opyum.WindowsPlatform.Settings
 {
@@ -42,16 +43,30 @@ namespace Opyum.WindowsPlatform.Settings
                 var fileText = GetJsonFormFile(file);
                 if (fileText != string.Empty)
                 {
-                    JsonSettings += $"{(filecount++ > 0 ? "," : "")}{fileText}"; 
+                    JsonSettings += $"{(filecount++ > 0 ? "," : "")}{fileText}";
                 }
             }
             //converge all the key-value json pairs one object
             JsonSettings = $"{{{JsonSettings}}}";
             var gg = JsonConvert.DeserializeObject<SettingsContainer>(JsonSettings);
 
-            
-
             return gg;
+        }
+
+        public static IEnumerable<ShortcutKeyBinding> GetShortcuts() => LoadFromFile<ShortcutKeyBinding[]>($"{SettingsManager.GetSettingsDirectoryPath()}\\Shortcuts.json");
+
+        /// <summary>
+        /// Load settings from specific file
+        /// <para>The files must be written in JSON notation</para>
+        /// </summary>
+        public static T LoadFromFile<T>(string path)
+        {
+            if (!File.Exists(path))
+            {
+                throw new ArgumentException("location");
+            }
+
+            return JsonConvert.DeserializeObject<T>(File.ReadAllText(path));
         }
 
         internal static string GetJsonFormFile(string file)

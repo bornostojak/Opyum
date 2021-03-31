@@ -1,4 +1,6 @@
-﻿namespace Opyum.Structures.Global
+﻿using System;
+
+namespace Opyum.Structures.Global
 {
     public interface IUndoRedoable
     {

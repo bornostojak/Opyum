@@ -15,12 +15,13 @@ using Opyum.Structures.Global;
 
 namespace Opyum.WindowsPlatform.Forms.Settings
 {
-    [OpyumSettingsPanelElement(typeof(List<ShortcutKeyBinding>))]
+    [OpyumSettingsPanelElement(typeof(ShortcutKeyBinding[]))]
     public partial class ShortcutPanelElement : UserControl, ISettingsPanel, IUndoRedoable
     {
-        List<ListViewItem> Data { get; set; } = null;
-        UndoRedoStack UnredoStack { get; set; } = new UndoRedoStack();
-        
+        List<ListViewItem> Data { get => _data; set => _data = value; } 
+        List<ListViewItem> _data = null;
+        UndoRedoStack UndoRedo { get; set; } = new UndoRedoStack();
+        public event SettingsChangedEventHandler SettingsChanged;
 
         public ShortcutPanelElement()
         {
@@ -29,15 +30,20 @@ namespace Opyum.WindowsPlatform.Forms.Settings
             this.listviewshortcuts.ItemSelectionChanged += ItemSelected;
             this.isGlobalCheckBox.CheckedChanged += globalChecked;
             this.isDisabledCheckBox.CheckedChanged += disabledChecked;
+            UndoRedo.UndoRedoStackChanged += (a, b) => { SettingsChanged?.Invoke(a, new SettingsChangedEventArgs(UndoRedo.UndoCount)); };
             this.Show();
-            
+
+
+            //block escape close when on textBox
+            this.textBoxShortcut.GotFocus += (a, b) => { SettingsEditor.BlockEscapeClose = true; };
+            this.textBoxShortcut.LostFocus += (a, b) => { SettingsEditor.BlockEscapeClose = false; };
         }
 
         private void ItemSelected(object sender, EventArgs e)
         {
             if (listviewshortcuts.SelectedItems != null && listviewshortcuts.SelectedItems.Count > 0)
             {
-                textBoxShortcut.Text = string.Join(", ", ((IShortcutKeyBinding)listviewshortcuts.SelectedItems[0].Tag).Shortcut);
+                textBoxShortcut.Text = ShortcutResolver.GetShortcutString(((IShortcutKeyBinding)listviewshortcuts.SelectedItems[0].Tag).ShortcutKeys);
                 textBoxAssigned.Text = ((IShortcutKeyBinding)listviewshortcuts.SelectedItems[0].Tag).Action;
                 isGlobalCheckBox.Enabled = true;
                 isGlobalCheckBox.Checked = ((IShortcutKeyBinding)listviewshortcuts.SelectedItems[0].Tag).Global;
@@ -73,6 +79,8 @@ namespace Opyum.WindowsPlatform.Forms.Settings
 
         public object LoadElements()
         {
+            if (listviewshortcuts.Items.Count > 0)
+                listviewshortcuts.Items.Clear();
             var p = SettingsEditor.Settings?.NewSettings?.Shortcuts;
             Data = p?.Select(g => GenerateItem(g)).ToList();
             listviewshortcuts.Items.AddRange(Data.ToArray());
@@ -130,14 +138,27 @@ namespace Opyum.WindowsPlatform.Forms.Settings
         /// <param name="e"></param>
         private void getShortcut(object sender, KeyEventArgs e)
         {
+            e.Handled = true;
             var shortcuts = ShortcutResolver.GrabShortcut(e);
             if (shortcuts == null) return;
             textBoxShortcut.Clear();
             textBoxShortcut.Text = ShortcutResolver.GetShortcutString(shortcuts);
             textBoxShortcut.Text = textBoxShortcut.Text == "Back" ? "" : textBoxShortcut.Text;
-            textBoxAssigned.Text = SettingsManager.GlobalSettings.Shortcuts.FirstOrDefault(x => x.ShortcutKeys.SequenceEqual(shortcuts))?.Action;
+            textBoxShortcut.Tag = shortcuts;
+            textBoxAssigned.Text = SettingsEditor.Settings.NewSettings.Shortcuts.FirstOrDefault(x => x.ShortcutKeys.SequenceEqual(shortcuts))?.Action;
         }
 
+        private void buttonClearShortcut_Click(object sender, EventArgs e)
+        {
+            if (listviewshortcuts.SelectedItems.Count > 0)
+            {
+                var existing = listviewshortcuts.SelectedItems[0];
+                var shortcut = ((IShortcutKeyBinding)existing.Tag).Clone();
+                shortcut.ShortcutKeys.Clear();
+                UndoRedo.Do(new UndoRedoMethodCapsule(ChangeShortcut, existing, shortcut, this));
+                return;
+            }
+        }
 
         private void buttonSaveShortcut_Click(object sender, EventArgs e)
         {
@@ -160,26 +181,26 @@ namespace Opyum.WindowsPlatform.Forms.Settings
                         List<UndoRedoMethodCapsule> lst = new List<UndoRedoMethodCapsule>();
                         //empty the old shortcut
                         var cone = ((IShortcutKeyBinding)existing?.FirstOrDefault().Tag).Clone();
-                        (cone.Global, cone.IsDisabled, cone.Shortcut) = (isGlobalCheckBox.Checked, isDisabledCheckBox.Checked, new List<string>());
+                        (cone.Global, cone.IsDisabled, cone.ShortcutKeys) = (isGlobalCheckBox.Checked, isDisabledCheckBox.Checked, new List<Keys>());
                         lst.Add(new UndoRedoMethodCapsule(ChangeShortcut, existing?.FirstOrDefault(), cone, this));
 
                         //create the new shortcut
                         cone = ((IShortcutKeyBinding)listviewshortcuts.SelectedItems[0].Tag).Clone();
-                        (cone.Global, cone.IsDisabled, cone.Shortcut) = (isGlobalCheckBox.Checked, isDisabledCheckBox.Checked, new List<string>(textBoxShortcut.Text.Split(new[] { ", " }, StringSplitOptions.RemoveEmptyEntries)));
+                        (cone.Global, cone.IsDisabled, cone.ShortcutKeys) = (isGlobalCheckBox.Checked, isDisabledCheckBox.Checked, (List<Keys>)textBoxShortcut.Tag);
                         lst.Add(new UndoRedoMethodCapsule(ChangeShortcut, listviewshortcuts.SelectedItems[0], cone, this));
 
                         //requiest to execute the operation
-                        UnredoStack.DoMany(lst);
+                        UndoRedo.DoMany(lst);
                         return;
                     }
                 }
                 //if the new shortcut is not already in use
                 var clone = ((ShortcutKeyBinding)listviewshortcuts.SelectedItems[0].Tag).Clone();
-                clone.Shortcut = new List<string>(textBoxShortcut.Text.Split(new[] { ", " }, StringSplitOptions.RemoveEmptyEntries));
+                clone.ShortcutKeys = new List<Keys>((List<Keys>)textBoxShortcut.Tag);
                 (clone.Global, clone.IsDisabled) = (isGlobalCheckBox.Checked, isDisabledCheckBox.Checked);
 
                 //requiest to execute the operation
-                UnredoStack.Do(ChangeShortcut, listviewshortcuts.SelectedItems[0],  clone, this);
+                UndoRedo.Do(ChangeShortcut, listviewshortcuts.SelectedItems[0],  clone, this);
             }
         }
 
@@ -208,23 +229,25 @@ namespace Opyum.WindowsPlatform.Forms.Settings
             {
                 if (e.KeyData == (Keys.Control | Keys.Z))
                 {
-                    UnredoStack.Undo();
+                    UndoRedo.Undo();
                 }
                 if (e.KeyData == (Keys.Control | Keys.Shift | Keys.Z))
                 {
-                    UnredoStack.Redo();
+                    UndoRedo.Redo();
                 } 
             }
         }
 
         public void Undo()
         {
-            UnredoStack?.Undo();
+            UndoRedo?.Undo();
         }
 
         public void Redo()
         {
-            UnredoStack?.Redo();
+            UndoRedo?.Redo();
         }
+
+        
     }
 }

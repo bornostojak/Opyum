@@ -15,7 +15,7 @@ namespace Opyum.Structures.Global
 
 
         //event called upon a change in the undo stack
-        public event EventHandler UndoStackChanged;
+        public event EventHandler UndoRedoStackChanged;
 
         /// <summary>
         /// Use to undo the function done through the <see cref="Do"/> method
@@ -31,7 +31,7 @@ namespace Opyum.Structures.Global
                     //pulls the last element in the undo stack and if it has a list of oerations to exectu, does them in reverse order
                     RedoStack.Push(new List<UndoRedoMethodCapsule>(last?.Reverse<UndoRedoMethodCapsule>()?.Select(z => new UndoRedoMethodCapsule(z.Method, z.Victim, ExecuteMethod(z), z.CallerObject)))); 
                 }
-                UndoStackChanged?.Invoke(this, new EventArgs());
+                UndoRedoStackChanged?.Invoke(this, new EventArgs());
             }
 
         }
@@ -44,13 +44,13 @@ namespace Opyum.Structures.Global
         {
             if (RedoStack.Count > 0)
             {
-                var last = UndoStack.Pop();
+                var last = RedoStack.Pop();
                 if (last.Count > 0)
                 {
                     //pulls the last element in the redo stack and if it has a list of oerations to exectu, re-does them in reverse order
                     UndoStack.Push(new List<UndoRedoMethodCapsule>(last?.Reverse<UndoRedoMethodCapsule>()?.Select(z => new UndoRedoMethodCapsule(z.Method, z.Victim ,ExecuteMethod(z), z.CallerObject))));
                 }
-                UndoStackChanged?.Invoke(this, new EventArgs());
+                UndoRedoStackChanged?.Invoke(this, new EventArgs());
             }
         }
 
@@ -78,7 +78,7 @@ namespace Opyum.Structures.Global
                 {
                     ClearRedo();
                 }
-                UndoStackChanged?.Invoke(this, new EventArgs());
+                UndoRedoStackChanged?.Invoke(this, new EventArgs());
             }
             catch (Exception e)
             {
@@ -102,7 +102,7 @@ namespace Opyum.Structures.Global
                 {
                     ClearRedo();
                 }
-                UndoStackChanged?.Invoke(this, new EventArgs());
+                UndoRedoStackChanged?.Invoke(this, new EventArgs());
             }
             catch (Exception e)
             {
@@ -122,7 +122,7 @@ namespace Opyum.Structures.Global
                 if (worklist != null)
                 {
                     UndoStack.Push(worklist.Select(a => new UndoRedoMethodCapsule(a.Method, a.Victim, ExecuteMethod(a), a.CallerObject)).ToList());
-                    UndoStackChanged?.Invoke(this, new EventArgs());
+                    UndoRedoStackChanged?.Invoke(this, new EventArgs());
                 }
             }
             catch (Exception e)

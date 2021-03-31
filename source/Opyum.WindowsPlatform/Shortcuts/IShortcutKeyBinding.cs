@@ -20,12 +20,12 @@ namespace Opyum.WindowsPlatform.Shortcuts
         /// <summary>
         /// The <see cref="object"/> containing the function delegate
         /// </summary>
-        object Function { get; }
+        object Function { get; set; }
 
         /// <summary>
         /// The shortcut in string form.
         /// </summary>
-        List<string> Shortcut { get; set; }
+        string[] Shortcut { get; set; }
 
         /// <summary>
         /// The Description of the shortcut
@@ -53,11 +53,11 @@ namespace Opyum.WindowsPlatform.Shortcuts
         /// </summary>
         List<string> Args { get; set; }
 
-        /// <summary>
-        /// Set the function the shortcut will call when needed.
-        /// </summary>
-        /// <param name="func"></param>
-        void AddFunction(object func);
+        ///// <summary>
+        ///// Set the function the shortcut will call when needed.
+        ///// </summary>
+        ///// <param name="func"></param>
+        //void AddFunction(object func);
 
         /// <summary>
         /// See if the shortcut in <paramref name="keys"/> match the shortcuts in the <see cref="IShortcutKeyBinding"/>
@@ -80,8 +80,8 @@ namespace Opyum.WindowsPlatform.Shortcuts
         /// <summary>
         /// Updates the shortcut string
         /// </summary>
-        /// <param name="str"></param>
-        void UpdateShortcutString(List<string> str);
+        /// <param name="shortcut"></param>
+        void UpdateShortcut(IEnumerable<Keys> shortcut);
 
         /// <summary>
         /// Clone the element into a new instance with same parameters
@@ -95,5 +95,10 @@ namespace Opyum.WindowsPlatform.Shortcuts
         /// </summary>
         /// <param name="keybinding"></param>
         IShortcutKeyBinding UpdateDataFromKeybinding(IShortcutKeyBinding keybinding);
+
+        /// <summary>
+        /// Is called when the shortcut is changed.
+        /// </summary>
+        event EventHandler ShortcutChanged;
     }
 }

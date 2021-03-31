@@ -22,8 +22,11 @@ namespace Opyum.WindowsPlatform
             watcher.EnableRaisingEvents = true;
             watcher.Changed += (a, b) =>
             {
-                SettingsManager.UpdateSettingsFromFile(b.FullPath);
-                this.Invoke(new Action(MenuStrip_Shortcut_Update));
+                if (!SettingsManager.SavingSettings)
+                {
+                    SettingsManager.UpdateSettingsFromFile(b.FullPath);
+                    this.Invoke(new Action(MenuStrip_Shortcut_Update)); 
+                }
             };
         }
     }
