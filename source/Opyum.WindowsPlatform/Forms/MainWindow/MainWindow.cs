@@ -39,7 +39,10 @@ namespace Opyum.WindowsPlatform
             {
                 shortcut = ShortcutResolver.ResolveShortcut(sender, e);
             });
-            shortcut?.Run(sender);
+            if (shortcut != null && !shortcut.IsDisabled)
+            {
+                shortcut?.Run(sender); 
+            }
             //SettingsManager.GlobalSettings?.FindShortcut(ShortcutResolver.GrabShortcut(e)?.ToArray())?.Run(sender);
         }
     }

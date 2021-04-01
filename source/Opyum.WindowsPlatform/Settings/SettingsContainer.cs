@@ -13,7 +13,7 @@ namespace Opyum.WindowsPlatform.Settings
         [OpyumSettingsGroup("General")]
         public ShortcutKeyBinding[] Shortcuts { get => _shortcuts.Cast<ShortcutKeyBinding>().ToArray(); set { updateShortcuts(value);} }
         List<IShortcutKeyBinding> _shortcuts = new List<IShortcutKeyBinding>();
-        Dictionary<Keys[], IShortcutKeyBinding> _shortcutslist = new Dictionary<Keys[], IShortcutKeyBinding>(new ShortcutDictonayComparer());
+        Dictionary<Keys[], IShortcutKeyBinding> _shortcutsdict = new Dictionary<Keys[], IShortcutKeyBinding>(new ShortcutDictonayComparer());
 
         [OpyumSettingsGroup("Appearance")]
         public List<ColorContainer> Colors { get; set; } = null;
@@ -45,7 +45,7 @@ namespace Opyum.WindowsPlatform.Settings
             Plugins = update.Plugins;
         }
 
-        public IShortcutKeyBinding FindShortcut(Keys[] keys) => keys != null && _shortcutslist.ContainsKey(keys) ? _shortcutslist[keys] : null;
+        public IShortcutKeyBinding FindShortcut(Keys[] keys) => keys != null && _shortcutsdict.ContainsKey(keys) ? _shortcutsdict[keys] : null;
 
         /// <summary>
         /// Updates the shortcuts
@@ -55,34 +55,39 @@ namespace Opyum.WindowsPlatform.Settings
         /// <exception cref="ArgumentOutOfRangeException"/>
         private void updateShortcuts(IEnumerable<IShortcutKeyBinding> shortcuts)
         {
+            //continue if there are shortcuts to update
             if (shortcuts != null && shortcuts.Count() > 0)
             {
+                //hashmap of current shortcuts
                 var old = _shortcuts.ToDictionary(j => j.Command);
-                var notpresent = shortcuts.GroupBy(c => old.ContainsKey(c.Command), c => c, (there, keys) => new { Found = there, Keys = keys });
 
-                foreach (var item in notpresent)
+                //
+                var groupbypresent = shortcuts.GroupBy(c => old.ContainsKey(c.Command) ? (old[c.Command].ShortcutKeys.SequenceEqual(c.ShortcutKeys) ? 2 : 1) : 0, c => c, (gr, keys) => new { Group = gr, Keys = keys });
+
+                foreach (var item in groupbypresent)
                 {
-                    if (item.Found)
+                    if (item.Group == 2)
+                    {
+                        continue;
+                    }
+                    if (item.Group == 1)
                     {
                         foreach (var i in item.Keys)
                         {
                             old[i.Command].UpdateShortcut(i.ShortcutKeys);
                         }
                     }
-                    else
+                    else if(item.Group == 0)
                     {
                         ShortcutManager.SetUpShortcuts(item.Keys);
                         _shortcuts.AddRange(item.Keys);
                     }
                 }
 
-                _shortcutslist = _shortcuts.Where(s => s.ShortcutKeys.Count() > 0).ToDictionary(x => x.ShortcutKeys.ToArray(), new ShortcutDictonayComparer());
+                _shortcutsdict = _shortcuts.Where(s => s.ShortcutKeys.Count() > 0).ToDictionary(x => x.ShortcutKeys.ToArray(), new ShortcutDictonayComparer());
 
-                //check if a shortcut combination will result with premature shortcut resolution
-                //will a 3 key combo result in a 2 key combo resultion
-                //i.e. Ctrl+K, Ctrl+P might be resolved with Ctrk+K to wrong function
                 var zone = _shortcuts.GroupBy(s => s.ShortcutKeys.Count(), s => s, (count, s) => new { Count = count, Shortcuts = s }).OrderByDescending(i => i.Count).ToArray();
-                if (zone.Where(u => u.Count > 1).SelectMany(q => q.Shortcuts.TakeWhile(s => _shortcutslist.ContainsKey(s.ShortcutKeys.Take(q.Count - 1).ToArray()))).Count() > 0)
+                if (zone.Where(u => u.Count > 1).SelectMany(q => q.Shortcuts.TakeWhile(s => _shortcutsdict.ContainsKey(s.ShortcutKeys.Take(q.Count - 1).ToArray()))).Count() > 0)
                 {
                     throw new ArgumentOutOfRangeException("There is a shortcut key combindation that can resolve before the shortcut can be reached");
                 }

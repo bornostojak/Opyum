@@ -15,19 +15,6 @@ namespace Opyum.WindowsPlatform.Settings
 {
     public static class ShortcutManager
     {
-        //internal static void SetUpShortcutsOnRequest(object arg, EventArgs e)
-        //{
-        //    var info = Assembly.GetExecutingAssembly().GetTypes().SelectMany(i => i.GetMethods().Where(m => m.GetCustomAttributes(typeof(OpyumShortcutMethodAttribute)).Count() > 0)).ToArray();
-
-        //    MethodInfo method = info.Where(m => m.GetCustomAttribute<OpyumShortcutMethodAttribute>().Command == ((IShortcutKeyBinding)arg).Command).FirstOrDefault();
-        //    if (method != null)
-        //    {
-        //        ((IShortcutKeyBinding)arg).AddFunction(Delegate.CreateDelegate(typeof(ShortcutKeyBinding.DELEGATE), null, method));
-        //        ((IShortcutKeyBinding)arg).Description = ((OpyumShortcutMethodAttribute)method.GetCustomAttribute(typeof(OpyumShortcutMethodAttribute))).Description;
-        //        ((IShortcutKeyBinding)arg).Action = ((OpyumShortcutMethodAttribute)method.GetCustomAttribute(typeof(OpyumShortcutMethodAttribute))).Action;
-        //    }
-        //}
-
         internal static void SetUpShortcuts(IEnumerable<IShortcutKeyBinding> shortcuts)
         {
             var map = shortcuts.ToDictionary(f => f.Command);
@@ -52,17 +39,16 @@ namespace Opyum.WindowsPlatform.Settings
             var files = Directory.CreateDirectory(directory).GetFiles(searchPattern: "*.dll", searchOption: SearchOption.AllDirectories).Where(a => a.FullName.EndsWith(".dll", StringComparison.OrdinalIgnoreCase))?.Select(u => u.FullName);
             //List<MethodInfo> sclist = new List<MethodInfo>();
 
-            List<ShortcutKeyBinding> list = new List<ShortcutKeyBinding>();
+            IEnumerable<ShortcutKeyBinding> list = null;
             foreach (var file in files)
             {
                 try
                 {
-                    list.AddRange(Assembly.LoadFile(file)
+                    list = Assembly.LoadFile(file)
                         ?.GetTypes()
                         ?.SelectMany(t => t?.GetMethods()
                             ?.Where(m => m?.GetCustomAttribute<OpyumShortcutMethodAttribute>() != null && !(bool)SettingsManager.GlobalSettings?.Shortcuts?.Any(x => x.Command == m.GetCustomAttribute<OpyumShortcutMethodAttribute>()?.Command)))
-                        ?.Select(s => GetKeybindingFromMethodInfo(s))
-                        ?.ToList());
+                        ?.Select(s => GetKeybindingFromMethodInfo(s));
                 }
                 catch (InvalidOperationException)
                 {
@@ -81,15 +67,6 @@ namespace Opyum.WindowsPlatform.Settings
 
 
             return list.ToArray();
-        }
-
-        internal static List<ShortcutKeyBinding> GetUdatedShortcuts(string path)
-        {
-            string fileText = SettingsInterpreter.GetJsonFormFile(path);
-            var temp = new List<ShortcutKeyBinding>(JsonConvert.DeserializeObject<SettingsContainer>(fileText).Shortcuts);
-
-            //clone all the temp ones
-            return temp.Select(x => new ShortcutKeyBinding() { Command = x.Command, Shortcut = x.Shortcut }).ToList();
         }
 
         private static ShortcutKeyBinding GetKeybindingFromMethodInfo(MethodInfo method)
