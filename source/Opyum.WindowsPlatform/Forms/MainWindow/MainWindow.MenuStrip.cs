@@ -1,6 +1,8 @@
 ﻿using System.Windows.Forms;
 using Opyum.WindowsPlatform.Settings;
 using Opyum.WindowsPlatform.Attributes;
+using System;
+using System.Linq;
 
 namespace Opyum.WindowsPlatform
 {
@@ -46,6 +48,54 @@ namespace Opyum.WindowsPlatform
             }
         }
 
-        
+
+        /// <summary>
+        /// Starts updating the shortcuta written in the menustrip bar
+        /// </summary>
+        private void UpdateMenuStrip(object sender, EventArgs e)
+        {
+            UpdateMenuStrip();
+        }
+
+
+        /// <summary>
+        /// Starts updating the shortcuta written in the menustrip bar
+        /// </summary>
+        private void UpdateMenuStrip()
+        {
+            UpdateToolStripItemCollection(MenuStrip.Items);
+            return;
+        }
+
+
+        /// <summary>
+        /// Updateds the shortcuts in the <see cref="MainWindow.MenuStrip"/> based on the <see cref="SettingsManager.GlobalSettings"/>
+        /// </summary>
+        /// <param name="coll"></param>
+        private void UpdateToolStripItemCollection(ToolStripItemCollection coll)
+        {
+            foreach (var itemz in coll)
+            {
+                if (!(itemz is ToolStripMenuItem)) continue;
+                var item = (ToolStripMenuItem)itemz;
+                try
+                {
+                    if (item != null && item.Tag != null)
+                    {
+                        item.ShortcutKeyDisplayString = string.Join(", ", SettingsManager.GlobalSettings.Shortcuts.Where(x => item.Tag == null ? false : x.Command == (string)item.Tag && x.Function != null)?.FirstOrDefault()?.Shortcut);
+
+                    }
+                }
+                catch (ArgumentNullException)
+                {
+
+                }
+
+                if (item.HasDropDownItems)
+                {
+                    UpdateToolStripItemCollection(item.DropDownItems);
+                }
+            }
+        }
     }
 }

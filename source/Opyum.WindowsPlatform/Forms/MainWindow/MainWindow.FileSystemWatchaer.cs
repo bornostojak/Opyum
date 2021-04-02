@@ -11,23 +11,25 @@ namespace Opyum.WindowsPlatform
     public partial class MainWindow
     {
 
-        FileSystemWatcher watcher = new FileSystemWatcher();
+        static FileSystemWatcher settingsFSWatcher = new FileSystemWatcher()
+        {
+            Path = SettingsInterpreter.GetSettingsDirectoryPath().FullName,
+            NotifyFilter = NotifyFilters.LastAccess | NotifyFilters.LastWrite | NotifyFilters.FileName | NotifyFilters.DirectoryName,
+            Filter = "*.json",
+            EnableRaisingEvents = true
+        };
 
         //Monitors wheather any importan file for the application has changed
-        private void FileSystemWatcherSetup()
+        private void SettingsFileSystemWatcherSetup()
         {
-            watcher.Path = Paths.SettingsDirectoryPath;
-            watcher.NotifyFilter = NotifyFilters.LastAccess | NotifyFilters.LastWrite | NotifyFilters.FileName | NotifyFilters.DirectoryName;
-            watcher.Filter = "*.json";
-            watcher.EnableRaisingEvents = true;
-            watcher.Changed += (a, b) =>
+            settingsFSWatcher.Changed += (a, e) =>
             {
-                if (!SettingsManager.SavingSettings)
+                if (!SettingsInterpreter.SavingSettings)
                 {
-                    SettingsManager.UpdateSettingsFromFile(b.FullPath);
-                    this.Invoke(new Action(MenuStrip_Shortcut_Update)); 
+                    SettingsManager.UpdateSettingsFromFile(e.FullPath);
                 }
             };
         }
+
     }
 }

@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Opyum.Structures.Attributes;
 using Opyum.WindowsPlatform.Settings;
 using Opyum.WindowsPlatform.Attributes;
+using System.Collections.Generic;
 
 namespace Opyum.WindowsPlatform
 {
@@ -47,7 +48,7 @@ namespace Opyum.WindowsPlatform
         public event ScreenModeEvent ScreenModeChanged;
 
         //This function is activated when the application is put into fullscreenmode
-        [OpyumShortcutMethod("fullscreen", new[] { Keys.F11 }, Description = "Switch between fullscreen and windowed view.", Action = "Fullscreen")]
+        [OpyumShortcutMethod("fullscreen", Description = "Switch between fullscreen and windowed view.", Action = "Fullscreen", DefaultShortcut = new[] { Keys.F11 })]
         public void FullScreenModeChange(string[] args = null)
         {
             if (ScreenViewMode == ScreenMode.FullScreen)

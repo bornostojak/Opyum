@@ -109,6 +109,7 @@
     </Compile>
     <Compile Include="Colors\ColorContainer.cs" />
     <Compile Include="Settings\Paths.cs" />
+    <Compile Include="Settings\SettingsComponent.cs" />
     <Compile Include="Settings\SettingsContainer.cs" />
     <Compile Include="Settings\SettingsManager.cs" />
     <Compile Include="Settings\SettingsInterpreter.cs" />
@@ -144,9 +145,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MainWindow\MainWindow.MenuStrip.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MainWindow\MainWindow.MenuStrip_Shortcut_Update.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MainWindow\MainWindow.OnClosing.cs">
