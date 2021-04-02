@@ -33,8 +33,6 @@ namespace Opyum.WindowsPlatform.Forms.Settings
             UndoRedo.UndoRedoStackChanged += (a, b) => { SettingsChanged?.Invoke(a, new SettingsChangedEventArgs(UndoRedo.UndoCount)); };
             buttonSaveShortcut.Enabled = false;
             this.Show();
-            //ShortcutSwapPair.SettingsChanged += (a, b) => { SettingsChanged?.Invoke(a, b); };
-
 
 
             //block escape close when on textBox
@@ -163,45 +161,77 @@ namespace Opyum.WindowsPlatform.Forms.Settings
         {
             if (listviewshortcuts.SelectedItems.Count > 0)
             {
-                UndoRedo.Do<ListViewItem, IEnumerable<Keys>>(ChangeShortcut, listviewshortcuts.SelectedItems[0], new Keys[0], this);
+                var existing = listviewshortcuts.SelectedItems[0];
+                var shortcut = ((IShortcutKeyBinding)existing.Tag).Clone();
+                shortcut.ShortcutKeys.Clear();
+                UndoRedo.Do(new UndoRedoMethodCapsule(ChangeShortcut, existing, shortcut, this));
                 return;
             }
         }
 
         private void buttonSaveShortcut_Click(object sender, EventArgs e)
         {
-            if (textBoxShortcut.Tag != null && listviewshortcuts.SelectedItems.Count > 0)
+            
+            if (listviewshortcuts.SelectedItems.Count == 1 && textBoxShortcut.Text != string.Empty)
             {
-                var shortcuts = (IEnumerable<Keys>)textBoxShortcut.Tag;
-                var owner = Data.FirstOrDefault(x => ((IShortcutKeyBinding)x.Tag).ShortcutKeys.SequenceEqual(shortcuts));
-                var recipient = listviewshortcuts.SelectedItems[0];
-
-                if (owner != null)
+                //check if the shortcut is already in use
+                var existing = Data.Where(a => a.SubItems[1].Text == textBoxShortcut.Text);
+                if (existing.Count() > 0 && existing.FirstOrDefault() != listviewshortcuts.SelectedItems[0])
                 {
-                    if (MessageBox.Show($"This string is already in use by \"{((IShortcutKeyBinding)owner.Tag).Action}\".\nDo you want to owerwrite it?\n\nWARNING: the old shortcut will be deleted!", "nWARNING: shortcut already in use!", MessageBoxButtons.YesNo, icon: MessageBoxIcon.Warning) == DialogResult.No)
+                    //asks if the olds shortcut should be deleted
+                    if (MessageBox.Show($"This string is already in use by \"{existing?.FirstOrDefault()?.SubItems[0].Text}\".\nDo you want to owerwrite it?\n\nWARNING: the old shortcut will be deleted!", "nWARNING: shortcut already in use!", MessageBoxButtons.YesNo, icon: MessageBoxIcon.Warning) == DialogResult.No)
                     {
                         return;
                     }
+                    //if the shortcut should be replaced
+                    else
+                    {
+                        //create a list that will contain the operations that need to be executed
+                        List<UndoRedoMethodCapsule> lst = new List<UndoRedoMethodCapsule>();
+                        //empty the old shortcut
+                        var cone = ((IShortcutKeyBinding)existing?.FirstOrDefault().Tag).Clone();
+                        (cone.Global, cone.IsDisabled, cone.ShortcutKeys) = (isGlobalCheckBox.Checked, isDisabledCheckBox.Checked, new List<Keys>());
+                        lst.Add(new UndoRedoMethodCapsule(ChangeShortcut, existing?.FirstOrDefault(), cone, this));
 
-                    //requiest to execute the operation
-                    UndoRedo.Do<ShortcutSwapPair, Keys[]>(ShortcutSwapPair.Swap, new ShortcutSwapPair(recipient, owner), new Keys[0]);
-                    return;
+                        //create the new shortcut
+                        cone = ((IShortcutKeyBinding)listviewshortcuts.SelectedItems[0].Tag).Clone();
+                        (cone.Global, cone.IsDisabled, cone.ShortcutKeys) = (isGlobalCheckBox.Checked, isDisabledCheckBox.Checked, (List<Keys>)textBoxShortcut.Tag);
+                        lst.Add(new UndoRedoMethodCapsule(ChangeShortcut, listviewshortcuts.SelectedItems[0], cone, this));
+
+                        //requiest to execute the operation
+                        UndoRedo.DoMany(lst);
+                        return;
+                    }
                 }
-                UndoRedo.Do<ListViewItem, IEnumerable<Keys>>(ChangeShortcut, recipient, shortcuts, this);
+                //if the new shortcut is not already in use
+                var clone = ((ShortcutKeyBinding)listviewshortcuts.SelectedItems[0].Tag).Clone();
+                clone.ShortcutKeys = new List<Keys>((List<Keys>)textBoxShortcut.Tag);
+                (clone.Global, clone.IsDisabled) = (isGlobalCheckBox.Checked, isDisabledCheckBox.Checked);
+
+                //requiest to execute the operation
+                UndoRedo.Do(ChangeShortcut, listviewshortcuts.SelectedItems[0],  clone, this);
             }
             buttonSaveShortcut.Enabled = false;
         }
 
-        public IEnumerable<Keys> ChangeShortcut(ListViewItem item, IEnumerable<Keys> srt)
+        public object ChangeShortcut(object o, object srt)
         {
-            var o = (IShortcutKeyBinding)item.Tag;
-            var old = o.ShortcutKeys.ToArray();
-            o.UpdateShortcut(srt);
-            item.SubItems[1].Text = ShortcutResolver.GetShortcutString(o.ShortcutKeys);
-            //SettingsChanged?.Invoke(((IShortcutKeyBinding)item.Tag), new SettingsChangedEventArgs(o.ShortcutKeys.Sum(b => (int)b)));
-            return old;
-        }
+            if (o is ListViewItem && srt is IShortcutKeyBinding)
+            {
+                //grab the old shortcut
+                var old = ((IShortcutKeyBinding)((ListViewItem)o).Tag).Clone();
+                //update the shortcut info
+                ((IShortcutKeyBinding)((ListViewItem)o).Tag).UpdateDataFromKeybinding((IShortcutKeyBinding)srt);
 
+                //update all the subitems in the selected item ListView
+                for (int i = 0;  i < ((ListViewItem)o).SubItems.Count;  i++)
+                {
+                    ((ListViewItem)o).SubItems[i] = GenerateItem((IShortcutKeyBinding)((ListViewItem)o).Tag).SubItems[i];
+                }
+                return old; 
+            }
+            return new List<string>();
+        }
 
         public void KeyPressResolve(object sender, KeyEventArgs e)
         {
@@ -228,39 +258,6 @@ namespace Opyum.WindowsPlatform.Forms.Settings
             UndoRedo?.Redo();
         }
 
-
-        public class ShortcutSwapPair
-        {
-            public static event SettingsChangedEventHandler SettingsChanged;
-            private ListViewItem NEW { get; set; }
-
-            private ListViewItem OLD { get; set; }
-
-
-            public ShortcutSwapPair(ListViewItem newVar, ListViewItem oldVar)
-            {
-                NEW = newVar;
-                OLD = oldVar;
-            }
-            public static Keys[] Swap(ShortcutSwapPair pair, Keys[] keys)
-            {
-                var temp = ((IShortcutKeyBinding)pair.NEW.Tag).ShortcutKeys.ToArray();
-                var oldsum = ((IShortcutKeyBinding)pair.NEW.Tag).ShortcutKeys.Sum(b => (int)b)+ ((IShortcutKeyBinding)pair.NEW.Tag).ShortcutKeys.Sum(b => (int)b);
-
-                ((IShortcutKeyBinding)pair.NEW.Tag).UpdateShortcut(((IShortcutKeyBinding)pair.OLD.Tag).ShortcutKeys.ToArray());
-                ((IShortcutKeyBinding)pair.OLD.Tag).UpdateShortcut(keys);
-                var swap = pair.NEW;
-                pair.NEW = pair.OLD;
-                pair.OLD = swap;
-
-
-                pair.NEW.SubItems[1].Text = ShortcutResolver.GetShortcutString(((IShortcutKeyBinding)pair.NEW.Tag).ShortcutKeys);
-                pair.OLD.SubItems[1].Text = ShortcutResolver.GetShortcutString(((IShortcutKeyBinding)pair.OLD.Tag).ShortcutKeys);
-
-
-                SettingsChanged?.Invoke(pair, new SettingsChangedEventArgs(oldsum));
-                return temp;
-            }
-        }
+        
     }
 }

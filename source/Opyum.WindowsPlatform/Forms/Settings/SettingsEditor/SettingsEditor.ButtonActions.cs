@@ -62,25 +62,25 @@ namespace Opyum.WindowsPlatform.Settings
             //it he changelog doesnt have the used setting change tracked, add & update it
             if (!ChangeLog.ContainsKey(sender))
             {
-                ChangeLog.Add(sender, e.UnsavedSettingsCount);
+                ChangeLog.Add(sender, e.OldState);
             }
             //otherwise just update it
             else
             {
-                ChangeLog[sender] = e.UnsavedSettingsCount;
+                ChangeLog[sender] = e.OldState;
             }
 
-            if (ChangeLog.Values?.Sum() > 0)
+            if (_recordedChanges == null && ChangeLog.Values.Sum() > 0)
             {
                 applyButton.Enabled = true;
+            }
+            else if (_recordedChanges != null)
+            {
+                applyButton.Enabled = !_recordedChanges.SequenceEqual(ChangeLog);
             }
             else
             {
                 applyButton.Enabled = false;
-            }
-            if (_recordedChanges != null)
-            {
-                applyButton.Enabled = !_recordedChanges.SequenceEqual(ChangeLog);
             }
             //BETTWR WAY: create a undoredostack status function that returns a number inidcating what state the stack is
             //if the numbers matches the recorded state number, no changes are untracked
