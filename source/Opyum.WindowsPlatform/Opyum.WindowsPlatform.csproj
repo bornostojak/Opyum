@@ -92,6 +92,9 @@
     <Compile Include="Forms\Settings\Panels\CustomPanelControls\TextBoxForShortcutCapture.cs">
       <SubType>Component</SubType>
     </Compile>
+    <None Include="Forms\Settings\Panels\Shortcuts\ShortcutPanelElement.cs.old">
+      <SubType>UserControl</SubType>
+    </None>
     <Compile Include="Forms\Settings\SettingsEditor\SettingsEditor.ButtonActions.cs">
       <SubType>Form</SubType>
     </Compile>

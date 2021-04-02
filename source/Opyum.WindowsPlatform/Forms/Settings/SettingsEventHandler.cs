@@ -8,7 +8,7 @@ namespace Opyum.WindowsPlatform.Settings
 {
     public class SettingsChangedEventArgs : EventArgs
     {
-        public int UnsavedSettingsCount { get; set; } = 0;
+        public int OldState { get; set; } = 0;
         public SettingsChangedEventArgs()
         {
 
@@ -16,7 +16,7 @@ namespace Opyum.WindowsPlatform.Settings
 
         public SettingsChangedEventArgs(int changes) : this()
         {
-            UnsavedSettingsCount = changes;
+            OldState = changes;
         }
     }
 
