@@ -3,6 +3,7 @@ using System;
 using System.Drawing;
 using Opyum.WindowsPlatform.Settings;
 using Opyum.WindowsPlatform.Attributes;
+using System.Windows.Forms;
 
 namespace Opyum.WindowsPlatform
 {
@@ -21,6 +22,7 @@ namespace Opyum.WindowsPlatform
 
             //Load settings from file
             SettingsManager.LoadSettings();
+            SettingsManager.GlobalSettings.SettingsChanged += UpdateMenuStrip;
 
             //Bind all shortcuts
             //KeyBindingArgument.AllBindingsSetup(SettingsInterpreter.SettingsXML.Clone());
@@ -33,7 +35,7 @@ namespace Opyum.WindowsPlatform
             this.SizeChanged += PanelSizeAdaptation;
 
             //File wather that checks if the settings files have been changed
-            FileSystemWatcherSetup();
+            SettingsFileSystemWatcherSetup();
 
             //Back
             this.BackColor = Color.AliceBlue;
@@ -45,7 +47,7 @@ namespace Opyum.WindowsPlatform
             //FullScreenModeChange();
 
             //Updates the shortcut for the MenuStrip buttons
-            MenuStrip_Shortcut_Update();
+            UpdateMenuStrip();
 
         }
 

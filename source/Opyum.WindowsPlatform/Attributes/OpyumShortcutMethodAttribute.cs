@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Opyum.WindowsPlatform.Attributes
 {
-    [AttributeUsage(AttributeTargets.Method)]
+    [AttributeUsage(AttributeTargets.Method, AllowMultiple = true, Inherited = false)]
     public class OpyumShortcutMethodAttribute : Attribute
     {
         public static List<OpyumShortcutMethodAttribute> All { get; protected set; } = new List<OpyumShortcutMethodAttribute>();
@@ -19,20 +19,18 @@ namespace Opyum.WindowsPlatform.Attributes
             All.Add(this);
         }
 
-        public OpyumShortcutMethodAttribute(string command, List<Keys> shortcut)
+        public OpyumShortcutMethodAttribute(string command, string description = "", string action = "", Keys[] shortcut = null)
         {
             Command = command;
-            DefaultShortcut = shortcut;
+            Description = description;
+            Action = action;
+            if (shortcut != null)
+            {
+                DefaultShortcut = shortcut; 
+            }
             All.Add(this);
         }
 
-        public OpyumShortcutMethodAttribute(string command, Keys[] shortcut)
-        {
-            Command = command;
-            DefaultShortcut = shortcut.ToList();
-            All.Add(this);
-        }
-
-        public List<Keys> DefaultShortcut { get; protected set; } = new List<Keys>();
+        public Keys[] DefaultShortcut { get; set; } = new Keys[0];
     }
 }

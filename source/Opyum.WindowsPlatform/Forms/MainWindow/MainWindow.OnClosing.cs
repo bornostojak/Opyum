@@ -16,7 +16,7 @@ namespace Opyum.WindowsPlatform
         /// <param name="e"></param>
         public void OnClosing_Safety_Question(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            DialogResult dr = MessageBox.Show(this, "Are you sure you want to CLOSE this program?", "WARNING: Closing Program", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation);
+            DialogResult dr = MessageBox.Show(this, "Are you sure you want to CLOSE this program?", "WARNING:", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation);
 
             switch (dr)
             {
