@@ -45,3 +45,17 @@ C:\Users\nozia\repos\opyum\source\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.Wind
 C:\Users\nozia\repos\opyum\source\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.WindowsPlatform.WPF.csproj.CoreCompileInputs.cache
 C:\Users\nozia\repos\opyum\source\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.WindowsPlatform.WPF.dll
 C:\Users\nozia\repos\opyum\source\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.WindowsPlatform.WPF.pdb
+C:\Users\nozia\repos\opyum\debug\Opyum.WindowsPlatform.WPF.dll
+C:\Users\nozia\repos\opyum\debug\Opyum.WindowsPlatform.WPF.pdb
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.WindowsPlatform.WPF.csprojAssemblyReference.cache
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Debug\Windows\MainWindow.g.cs
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.WindowsPlatform.WPF_MarkupCompile.cache
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.WindowsPlatform.WPF_MarkupCompile.lref
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Debug\Themes\Generic.baml
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Debug\Windows\MainWindow.baml
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.WindowsPlatform.WPF.g.resources
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.WindowsPlatform.WPF.Properties.Resources.resources
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.WindowsPlatform.WPF.csproj.GenerateResource.cache
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.WindowsPlatform.WPF.csproj.CoreCompileInputs.cache
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.WindowsPlatform.WPF.dll
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.WindowsPlatform.WPF.pdb

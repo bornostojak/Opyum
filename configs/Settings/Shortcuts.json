@@ -1,7 +1,6 @@
-{"Shortcut":
 [
-      { "Command": "full_screen_mode_switch", "Keys": "Ctrl+F11" },
-      { "Command": "bullshit", "Keys": "Ctrl+Alt+I" },
-      { "Command": "show_menu_strip_for_touch", "Keys": "Ctrl+Alt+L"}
+	{"Command":"fullscreen","Shortcut":["F11"],"Global":true,"Args":null},
+	{"Command":"hide_menu_strip","Shortcut":["Ctrl+K","Ctrl+M"],"Global":false,"Args":null},
+	{"Command":"open_settings","Shortcut":["Ctrl+K","Ctrl+P"],"Global":false,"Args":null},
+	{"Command":"hide_panels","Shortcut":["Ctrl+K","Ctrl+H"],"Global":false,"Args":null}
 ]
-}

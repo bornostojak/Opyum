@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\repos\Opyum\source\Opyum.WindowsPlatform.WPF\obj\Release\
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Release\
 Opyum.WindowsPlatform.WPF
 none
 false
@@ -16,5 +16,5 @@ TRACE
 13-1505183044
 Themes\Generic.xaml;Windows\MainWindow.xaml;
 
-False
+True
 

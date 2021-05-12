@@ -21,3 +21,10 @@ C:\Users\nozia\repos\opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.Standar
 C:\Users\nozia\repos\opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.csproj.CopyComplete
 C:\Users\nozia\repos\opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.dll
 C:\Users\nozia\repos\opyum\source\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.pdb
+C:\Users\nozia\repos\opyum\debug\Opyum.StandardPlayback.dll
+C:\Users\nozia\repos\opyum\debug\Opyum.StandardPlayback.pdb
+C:\Users\nozia\repos\opyum\src\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.csprojAssemblyReference.cache
+C:\Users\nozia\repos\opyum\src\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.csproj.CoreCompileInputs.cache
+C:\Users\nozia\repos\opyum\src\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.csproj.CopyComplete
+C:\Users\nozia\repos\opyum\src\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.dll
+C:\Users\nozia\repos\opyum\src\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.pdb

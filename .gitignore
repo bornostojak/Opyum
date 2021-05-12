@@ -1,2 +1,3 @@
-builds/
-debug_build/
+bin/
+debug/
+test_player/

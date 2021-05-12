@@ -179,7 +179,7 @@ namespace Opyum.WindowsPlatform.Settings
 
         public static DirectoryInfo GetSettingsDirectoryPath()
         {
-            string path = Path.GetFullPath(Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), @"..\Settings"));
+            string path = Path.GetFullPath(Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), @"..\configs\Settings"));
             return Directory.CreateDirectory(path);
         }
 

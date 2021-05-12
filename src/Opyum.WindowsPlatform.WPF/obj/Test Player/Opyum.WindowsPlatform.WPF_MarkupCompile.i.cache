@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\repos\Opyum\source\Opyum.WindowsPlatform.WPF\obj\Test Player\
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Test Player\
 Opyum.WindowsPlatform.WPF
 none
 false
@@ -12,8 +12,8 @@ DEBUG;TRACE
 
 21413788504
 
-51136039472
-131569487696
+5-132612075
+13-1505183044
 Themes\Generic.xaml;Windows\MainWindow.xaml;
 
 True
