@@ -49,3 +49,5 @@ C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform\obj\Debug\Opyum.WindowsPlat
 C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform\obj\Debug\Opyum.WindowsPlatform.csproj.CopyComplete
 C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform\obj\Debug\Opyum.WindowsPlatform.dll
 C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform\obj\Debug\Opyum.WindowsPlatform.pdb
+C:\Users\nozia\repos\opyum\debug\bin\Opyum.WindowsPlatform.dll
+C:\Users\nozia\repos\opyum\debug\bin\Opyum.WindowsPlatform.pdb

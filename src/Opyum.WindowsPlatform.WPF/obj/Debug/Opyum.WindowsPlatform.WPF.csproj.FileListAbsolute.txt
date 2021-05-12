@@ -59,3 +59,5 @@ C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.Windows
 C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.WindowsPlatform.WPF.csproj.CoreCompileInputs.cache
 C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.WindowsPlatform.WPF.dll
 C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform.WPF\obj\Debug\Opyum.WindowsPlatform.WPF.pdb
+C:\Users\nozia\repos\opyum\debug\bin\Opyum.WindowsPlatform.WPF.dll
+C:\Users\nozia\repos\opyum\debug\bin\Opyum.WindowsPlatform.WPF.pdb

@@ -3,3 +3,8 @@ D:\repos\Opyum\builds\release\bin\Opyum.StandardPlayback.dll
 D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Release\Opyum.StandardPlayback.csproj.CoreCompileInputs.cache
 D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Release\Opyum.StandardPlayback.csproj.CopyComplete
 D:\repos\Opyum\source\Opyum.StandardPlayback\obj\Release\Opyum.StandardPlayback.dll
+C:\Users\nozia\repos\opyum\bin\Opyum.StandardPlayback.dll
+C:\Users\nozia\repos\opyum\src\Opyum.StandardPlayback\obj\Release\Opyum.StandardPlayback.csprojAssemblyReference.cache
+C:\Users\nozia\repos\opyum\src\Opyum.StandardPlayback\obj\Release\Opyum.StandardPlayback.csproj.CoreCompileInputs.cache
+C:\Users\nozia\repos\opyum\src\Opyum.StandardPlayback\obj\Release\Opyum.StandardPlayback.csproj.CopyComplete
+C:\Users\nozia\repos\opyum\src\Opyum.StandardPlayback\obj\Release\Opyum.StandardPlayback.dll

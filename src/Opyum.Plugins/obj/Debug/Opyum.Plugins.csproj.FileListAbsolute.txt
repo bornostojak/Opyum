@@ -28,3 +28,5 @@ C:\Users\nozia\repos\opyum\src\Opyum.Plugins\obj\Debug\Opyum.Plugins.csprojAssem
 C:\Users\nozia\repos\opyum\src\Opyum.Plugins\obj\Debug\Opyum.Plugins.csproj.CoreCompileInputs.cache
 C:\Users\nozia\repos\opyum\src\Opyum.Plugins\obj\Debug\Opyum.Plugins.dll
 C:\Users\nozia\repos\opyum\src\Opyum.Plugins\obj\Debug\Opyum.Plugins.pdb
+C:\Users\nozia\repos\opyum\debug\bin\Opyum.Plugins.dll
+C:\Users\nozia\repos\opyum\debug\bin\Opyum.Plugins.pdb

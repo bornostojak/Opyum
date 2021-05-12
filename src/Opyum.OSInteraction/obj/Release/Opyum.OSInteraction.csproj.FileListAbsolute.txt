@@ -6,3 +6,7 @@ D:\repos\Opyum\builds\release\bin\Opyum.OSInteraction.dll
 D:\repos\Opyum\source\Opyum.OSInteraction\obj\Release\Opyum.OSInteraction.csprojAssemblyReference.cache
 D:\repos\Opyum\source\Opyum.OSInteraction\obj\Release\Opyum.OSInteraction.dll
 D:\repos\Opyum\source\Opyum.OSInteraction\obj\Release\Opyum.OSInteraction.csproj.CoreCompileInputs.cache
+C:\Users\nozia\repos\opyum\bin\Opyum.OSInteraction.dll
+C:\Users\nozia\repos\opyum\src\Opyum.OSInteraction\obj\Release\Opyum.OSInteraction.csprojAssemblyReference.cache
+C:\Users\nozia\repos\opyum\src\Opyum.OSInteraction\obj\Release\Opyum.OSInteraction.csproj.CoreCompileInputs.cache
+C:\Users\nozia\repos\opyum\src\Opyum.OSInteraction\obj\Release\Opyum.OSInteraction.dll

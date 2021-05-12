@@ -28,3 +28,5 @@ C:\Users\nozia\repos\opyum\src\Opyum.OSInteraction\obj\Debug\Opyum.OSInteraction
 C:\Users\nozia\repos\opyum\src\Opyum.OSInteraction\obj\Debug\Opyum.OSInteraction.csproj.CoreCompileInputs.cache
 C:\Users\nozia\repos\opyum\src\Opyum.OSInteraction\obj\Debug\Opyum.OSInteraction.dll
 C:\Users\nozia\repos\opyum\src\Opyum.OSInteraction\obj\Debug\Opyum.OSInteraction.pdb
+C:\Users\nozia\repos\opyum\debug\bin\Opyum.OSInteraction.dll
+C:\Users\nozia\repos\opyum\debug\bin\Opyum.OSInteraction.pdb
