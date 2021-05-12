@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>.\</OutputPath>
+    <OutputPath>debug\</OutputPath>
     <DefineConstants>
     </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -28,14 +28,14 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>.\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test Player|AnyCPU'">
     <DebugSymbols>false</DebugSymbols>
-    <OutputPath>..\..\builds\test_player\bin\</OutputPath>
+    <OutputPath>..\..\test_player\</OutputPath>
     <DefineConstants>TRACE;DEBUG</DefineConstants>
     <DebugType>none</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
