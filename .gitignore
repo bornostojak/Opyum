@@ -8,6 +8,6 @@ test_player/*
 # Keep the config folders
 !debug/config
 !test_player/config
-!builds/release/config/*
-!builds/debug/config/*
-!builds/test_player/config/*
+!builds/release/config
+!builds/debug/config
+!builds/test_player/config
