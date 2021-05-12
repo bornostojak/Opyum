@@ -46,3 +46,7 @@ C:\Users\nozia\repos\opyum\src\NAudio\obj\Debug\NAudio.csproj.GenerateResource.c
 C:\Users\nozia\repos\opyum\src\NAudio\obj\Debug\NAudio.csproj.CoreCompileInputs.cache
 C:\Users\nozia\repos\opyum\src\NAudio\obj\Debug\NAudio.dll
 C:\Users\nozia\repos\opyum\src\NAudio\obj\Debug\NAudio.pdb
+C:\Users\nozia\repos\opyum\debug\bin\Naudio\NAudio.dll.config
+C:\Users\nozia\repos\opyum\debug\bin\Naudio\NAudio.xml
+C:\Users\nozia\repos\opyum\debug\bin\Naudio\NAudio.dll
+C:\Users\nozia\repos\opyum\debug\bin\Naudio\NAudio.pdb

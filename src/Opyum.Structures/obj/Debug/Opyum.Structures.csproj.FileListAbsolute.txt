@@ -32,3 +32,5 @@ C:\Users\nozia\repos\opyum\src\Opyum.Structures\obj\Debug\Opyum.Structures.cspro
 C:\Users\nozia\repos\opyum\src\Opyum.Structures\obj\Debug\Opyum.Structures.csproj.CopyComplete
 C:\Users\nozia\repos\opyum\src\Opyum.Structures\obj\Debug\Opyum.Structures.dll
 C:\Users\nozia\repos\opyum\src\Opyum.Structures\obj\Debug\Opyum.Structures.pdb
+C:\Users\nozia\repos\opyum\debug\bin\Opyum.Structures.dll
+C:\Users\nozia\repos\opyum\debug\bin\Opyum.Structures.pdb

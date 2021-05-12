@@ -28,3 +28,5 @@ C:\Users\nozia\repos\opyum\src\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPl
 C:\Users\nozia\repos\opyum\src\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.csproj.CopyComplete
 C:\Users\nozia\repos\opyum\src\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.dll
 C:\Users\nozia\repos\opyum\src\Opyum.StandardPlayback\obj\Debug\Opyum.StandardPlayback.pdb
+C:\Users\nozia\repos\opyum\debug\bin\Opyum.StandardPlayback.dll
+C:\Users\nozia\repos\opyum\debug\bin\Opyum.StandardPlayback.pdb

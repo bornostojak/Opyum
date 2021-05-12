@@ -46,3 +46,6 @@ C:\Users\nozia\repos\opyum\src\Opyum.Launcher\obj\Debug\Opyum.Launcher.csproj.Co
 C:\Users\nozia\repos\opyum\src\Opyum.Launcher\obj\Debug\Opyum.Launcher.csproj.CopyComplete
 C:\Users\nozia\repos\opyum\src\Opyum.Launcher\obj\Debug\Opyum Launcher.exe
 C:\Users\nozia\repos\opyum\src\Opyum.Launcher\obj\Debug\Opyum Launcher.pdb
+C:\Users\nozia\repos\opyum\debug\bin\Opyum Launcher.exe.config
+C:\Users\nozia\repos\opyum\debug\bin\Opyum Launcher.exe
+C:\Users\nozia\repos\opyum\debug\bin\Opyum Launcher.pdb

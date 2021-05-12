@@ -8,3 +8,7 @@ D:\repos\Opyum\builds\release\bin\Opyum.Plugins.dll
 D:\repos\Opyum\source\Opyum.Plugins\obj\Release\Opyum.Plugins.csprojAssemblyReference.cache
 D:\repos\Opyum\source\Opyum.Plugins\obj\Release\Opyum.Plugins.dll
 D:\repos\Opyum\source\Opyum.Plugins\obj\Release\Opyum.Plugins.csproj.CoreCompileInputs.cache
+C:\Users\nozia\repos\opyum\bin\Opyum.Plugins.dll
+C:\Users\nozia\repos\opyum\src\Opyum.Plugins\obj\Release\Opyum.Plugins.csprojAssemblyReference.cache
+C:\Users\nozia\repos\opyum\src\Opyum.Plugins\obj\Release\Opyum.Plugins.csproj.CoreCompileInputs.cache
+C:\Users\nozia\repos\opyum\src\Opyum.Plugins\obj\Release\Opyum.Plugins.dll

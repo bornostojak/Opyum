@@ -17,3 +17,13 @@ D:\repos\Opyum\source\Opyum.WindowsPlatform\obj\Release\Opyum.WindowsPlatform.cs
 D:\repos\Opyum\source\Opyum.WindowsPlatform\obj\Release\Opyum.WindowsPlatform.csproj.CopyComplete
 D:\repos\Opyum\source\Opyum.WindowsPlatform\obj\Release\Opyum.WindowsPlatform.Forms.Settings.ShortcutPanelElement.resources
 D:\repos\Opyum\source\Opyum.WindowsPlatform\obj\Release\Opyum.WindowsPlatform.Settings.SettingsEditor.resources
+C:\Users\nozia\repos\opyum\bin\Opyum.WindowsPlatform.dll
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform\obj\Release\Opyum.WindowsPlatform.csprojAssemblyReference.cache
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform\obj\Release\Opyum.WindowsPlatform.MainWindow.resources
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform\obj\Release\Opyum.WindowsPlatform.Forms.Settings.ShortcutPanelElement.resources
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform\obj\Release\Opyum.WindowsPlatform.Settings.SettingsEditor.resources
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform\obj\Release\Opyum.WindowsPlatform.Properties.Resources.resources
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform\obj\Release\Opyum.WindowsPlatform.csproj.GenerateResource.cache
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform\obj\Release\Opyum.WindowsPlatform.csproj.CoreCompileInputs.cache
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform\obj\Release\Opyum.WindowsPlatform.csproj.CopyComplete
+C:\Users\nozia\repos\opyum\src\Opyum.WindowsPlatform\obj\Release\Opyum.WindowsPlatform.dll
